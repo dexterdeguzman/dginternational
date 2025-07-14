@@ -1,0 +1,13 @@
+.nav-link {
+	& {
+		display: inline-block;
+		text-decoration: none;
+		color: map-deep-get($colors, black, solid);
+		transition: all 0.33s $animation-type;
+	}
+
+	&:hover, &:active, &:focus {
+		color: map-get($colors, brandLight);
+		text-decoration: none;
+	}
+}

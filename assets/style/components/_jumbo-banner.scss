@@ -1,0 +1,32 @@
+.jumbo-banner {
+	& {
+		display: block;
+		width: 100%;
+		min-height: 36rem;
+	}
+
+	&.-home {
+		background: linear-gradient(125deg, #0C3C53, rgba(84, 70, 70, 0) 80%), url('../images/home-banner.jpg') center center/cover no-repeat;
+		padding-top: 12.8125rem;
+		box-sizing: border-box;
+		color: map-get($colors, white);
+	}
+
+	> .main-con > .head {
+		max-width: 42.125rem;
+		font-size: 3rem;
+		font-weight: map-get($font-weight, bld);
+		line-height: 4.75rem;
+		margin: 0;
+	}
+
+	> .main-con > .subhead {
+		max-width: 42.125rem;
+		font-size: map-get($sizes, smd);
+		line-height: 200%;
+		margin: 0;
+		font-weight: map-get($font-weight, md)
+	}
+
+	> .main-con > .main-btn { margin-top: 2rem }
+}

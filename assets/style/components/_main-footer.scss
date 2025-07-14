@@ -1,0 +1,6 @@
+.main-footer {
+	& {
+		background-color: map-get($colors, blendedBlue);
+		padding: 2.5rem;
+	}
+}

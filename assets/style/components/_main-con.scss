@@ -1,0 +1,80 @@
+.main-con {
+	& {
+		display: block;
+		width: 98%;
+		max-width: 1240px;
+		margin: 0 auto;
+
+		@media #{$max-ipad} { 
+			width: 100%;
+			padding: 0 24px;
+		}
+	}
+
+	&.-nav {
+		display: grid;
+		width: 100%;
+		grid-template-columns: 1fr auto;
+	}
+
+	&.-footer {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 5rem;
+
+		> .first > .footerLink {
+			display: inline-block;
+			position: relative;
+			margin-bottom: 2rem;
+		}
+
+		> .first > .footerNote {
+			position: relative;
+			color: map-get($colors, white);
+			padding-top: 2rem;
+			line-height: 150%;
+
+			&:after {
+				content: "";
+				position: absolute;
+				height: 4px;
+				background-color: map-get($colors, brandLight);
+				width: 5rem;
+				top: 0;
+				left: 0;
+			}
+		}
+
+		> .second > .head, > .third > .head {
+			color: map-get($colors, white);
+			font-weight: map-get($font-weight, bld);
+			margin-bottom: 2rem;
+			margin-top: 1rem;
+		}
+
+		> .second > .head { padding-left: 4rem }
+
+		> .second > .footerList { padding-left: 4rem }
+
+		> .second > .footerList > li {
+			margin-bottom: 1rem;
+
+			> .footerLink {
+				color: map-get($colors, white);
+				text-decoration: none;
+			}
+		}
+
+		> .third > .footerList {
+			color: map-get($colors, white);
+
+			> li { margin-bottom: 1rem }
+
+			img { 
+				margin-right: 0.75rem;
+				vertical-align: middle;
+			}
+		}
+	}
+
+}

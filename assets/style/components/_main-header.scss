@@ -1,0 +1,38 @@
+.main-header {
+	& {
+		text-align: center;
+		margin-bottom: 2rem;
+		margin-top: 3.875rem;
+	}	
+
+	> .head {
+		color: map-get($colors, branding);
+		font-size: 2rem;
+		position: relative;
+		padding-bottom: 1.5rem;
+		display: block;
+		max-width: 60rem;
+		margin: 0 auto;
+	}
+
+	> .head:after {
+		content: "";
+		position: absolute;
+		height: 0.25rem;
+		width: 5rem;
+		background-color: map-get($colors, brandLight);
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	> .subhead {
+		font-weight: map-get($font-weight, md);
+		display: block;
+		max-width: 52rem;
+		margin: 0 auto;
+		line-height: 200%;
+		margin-top: 1.5rem;
+		font-size: 1rem;
+	}
+}
