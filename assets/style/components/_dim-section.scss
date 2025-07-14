@@ -1,9 +1,0 @@
-.dim-section {
-	& {
-		display: grid;
-		box-sizing: border-box;
-		width: 100%;
-		background-color: map-deep-get($colors, gray, subtle);
-		padding-bottom: 3rem;
-	}
-}
