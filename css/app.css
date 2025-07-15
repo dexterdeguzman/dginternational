@@ -40,6 +40,7 @@ p {
 }
 
 input, textarea {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue, sans-serif;
   border: 1px solid #E1E1E1;
   border-radius: 0.25rem;
   width: 100%;
@@ -49,7 +50,7 @@ input, textarea {
   -o-box-sizing: border-box;
   box-sizing: border-box;
   height: 57px;
-  font-size: 20px;
+  font-size: 18px;
   position: relative;
   margin-bottom: 1.5rem;
 }
@@ -189,9 +190,16 @@ label {
   z-index: 100;
   border-bottom: 1px solid #E1E1E1;
 }
+.main-nav.-static {
+  background-color: transparent;
+  border: none;
+}
 
 .logo-link {
   display: inline-block;
+}
+.logo-link.-static {
+  position: absolute;
 }
 .logo-link > img {
   width: 14.5rem;
@@ -283,6 +291,11 @@ label {
   height: 3rem;
   font-size: 1rem;
 }
+.main-btn.-thankyou {
+  width: 15.25rem;
+  height: 3.5rem;
+  font-size: 1.125rem;
+}
 
 .jumbo-banner {
   display: block;
@@ -295,6 +308,14 @@ label {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: #fff;
+}
+.jumbo-banner.-thankyou {
+  background: linear-gradient(125deg, #0C3C53, rgba(84, 70, 70, 0) 80%), url("../images/nxtpage-bg.jpg") center center/cover no-repeat;
+  padding-top: 12.8125rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fff;
+  min-height: 100vh;
 }
 .jumbo-banner > .main-con > .head {
   max-width: 42.125rem;
