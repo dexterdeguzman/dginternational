@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function() {
 
 	// wow = new WOW(
 	// 	{
@@ -13,4 +13,12 @@ $( document ).ready(function() {
 	// menuBtn.click(function () {
 	// 	$(this).toggleClass("-showClose");
 	// });
+
+	$("#visaAssistanceLnk, #visaAssistanceSml, #visaAssistanceBG, #aboutLnk").click(function(e) {
+		var target = $(this).attr('href');
+	    $('html, body').animate({
+	        scrollTop: $(target).offset().top - 150
+	    }, 2000);
+	    e.preventDefault();
+	});
 });

@@ -180,6 +180,13 @@ label {
   margin-right: 0.75rem;
   vertical-align: middle;
 }
+.main-con.-static {
+  max-width: 56.25rem;
+  padding: 2rem 0 4rem;
+}
+.main-con.-static > h4 {
+  margin-bottom: 0.5rem;
+}
 
 .main-nav {
   background-color: #fff;
@@ -308,6 +315,19 @@ label {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: #fff;
+}
+.jumbo-banner.-pp {
+  background: url("../images/pp-banner.jpg") center center/cover no-repeat;
+  padding-top: 10rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fff;
+  min-height: 20rem;
+}
+.jumbo-banner.-pp > .main-con > .head {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 .jumbo-banner.-thankyou {
   background: linear-gradient(125deg, #0C3C53, rgba(84, 70, 70, 0) 80%), url("../images/nxtpage-bg.jpg") center center/cover no-repeat;
