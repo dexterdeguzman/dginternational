@@ -8,17 +8,31 @@ $(document).ready(function() {
 	// );
 	// wow.init();
 
-	// var menuBtn = $('.etoNavIcon');
+	var menuBtn = $('#menuBurger');
 
-	// menuBtn.click(function () {
-	// 	$(this).toggleClass("-showClose");
-	// });
+	menuBtn.click(function () {
+		$(this).toggleClass("-collapsed");
+
+		var box = $('#topNavList');
+		if (box.is(':visible')) {
+	      box.slideUp(300, function () {
+	        box.removeClass('-show');
+	      });
+	    } else {
+	      box.slideDown(300, function () {
+	        box.addClass('-show');
+	      });
+	    }
+		// $('#topNavList').toggleClass("-show");
+	});
 
 	$("#visaAssistanceLnk, #visaAssistanceSml, #visaAssistanceBG, #aboutLnk").click(function(e) {
 		var target = $(this).attr('href');
 	    $('html, body').animate({
 	        scrollTop: $(target).offset().top - 150
-	    }, 2000);
+	    }, 800);
 	    e.preventDefault();
 	});
+
+	document.getElementById('footerYar').textContent = new Date().getFullYear();
 });
