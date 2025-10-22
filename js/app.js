@@ -34,5 +34,5 @@ $(document).ready(function() {
 	    e.preventDefault();
 	});
 
-	document.getElementById('footerYar').textContent = new Date().getFullYear();
+	document.getElementById('footerYear').textContent = new Date().getFullYear();
 });
