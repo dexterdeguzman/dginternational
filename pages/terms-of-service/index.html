@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — De Guzman International Visa Consultancy</title>
+  <link rel="icon" type="image/png" href="../../assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    /* ---------- Variables & Reset ---------- */
+    :root {
+      --primary: #FCD832;
+      --primary-dark: #e0bf00;
+      --secondary: #3E83BC;
+      --secondary-dark: #2a6699;
+      --secondary-light: #5ba0d9;
+      --dark: #0f1b2d;
+      --dark-2: #162236;
+      --dark-3: #1a2a42;
+      --navy: #0a1628;
+      --white: #ffffff;
+      --off-white: #f8f9fb;
+      --gray-100: #eef1f5;
+      --gray-200: #dce1e8;
+      --gray-300: #b0b8c5;
+      --gray-500: #6b7a8d;
+      --gray-700: #3a4553;
+      --gradient-primary: linear-gradient(135deg, var(--primary) 0%, #f0c800 100%);
+      --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+      --gradient-dark: linear-gradient(180deg, var(--dark) 0%, var(--navy) 100%);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 8px 30px rgba(0,0,0,0.12);
+      --shadow-lg: 0 20px 60px rgba(0,0,0,0.15);
+      --shadow-primary: 0 8px 30px rgba(252,216,50,0.25);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 30px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      color: var(--gray-700);
+      background: var(--off-white);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; transition: var(--transition); }
+    img { max-width: 100%; height: auto; display: block; }
+    ul { list-style: none; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- Navbar ---------- */
+    .navbar {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+      padding: 10px 0; background: rgba(15,27,45,0.95);
+      backdrop-filter: blur(20px); box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+    }
+    .nav-container {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo img { height: 36px; }
+    .nav-menu { display: flex; align-items: center; gap: 8px; }
+    .nav-link {
+      padding: 10px 18px; color: rgba(255,255,255,0.8); font-weight: 600;
+      font-size: 0.9rem; border-radius: 50px; letter-spacing: 0.3px;
+    }
+    .nav-link:hover, .nav-link.active { color: var(--white); background: rgba(255,255,255,0.08); }
+    .nav-link.cta-btn {
+      background: var(--gradient-primary); color: var(--dark);
+      padding: 10px 24px; margin-left: 8px; box-shadow: var(--shadow-primary);
+    }
+    .nav-link.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 35px rgba(252,216,50,0.3); }
+    .nav-toggle {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px; z-index: 1001;
+    }
+    .nav-toggle span { width: 26px; height: 2.5px; background: var(--white); border-radius: 3px; transition: var(--transition); }
+    .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* ---------- Hero Banner ---------- */
+    .legal-hero {
+      position: relative; padding: 160px 0 80px;
+      overflow: hidden; text-align: center;
+    }
+    .legal-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1600&q=80') center/cover no-repeat;
+      transform: scale(1.05);
+    }
+    .legal-hero::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(10,22,40,0.92) 0%, rgba(15,27,45,0.88) 40%, rgba(62,131,188,0.75) 100%);
+    }
+    .legal-hero .floating-shapes { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
+    .legal-hero .shape { position: absolute; border-radius: 50%; opacity: 0.07; }
+    .legal-hero .shape-1 {
+      width: 300px; height: 300px; background: var(--primary);
+      top: -80px; right: -60px; animation: floatShape 20s ease-in-out infinite;
+    }
+    .legal-hero .shape-2 {
+      width: 200px; height: 200px; background: var(--secondary);
+      bottom: -40px; left: -60px; animation: floatShape 15s ease-in-out infinite reverse;
+    }
+    .legal-hero .shape-3 {
+      width: 120px; height: 120px; border: 2px solid rgba(252,216,50,0.2);
+      top: 30%; left: 15%; animation: floatShape 18s ease-in-out infinite 2s;
+    }
+    @keyframes floatShape {
+      0%, 100% { transform: translate(0,0) rotate(0deg); }
+      25% { transform: translate(30px,-40px) rotate(5deg); }
+      50% { transform: translate(-20px,20px) rotate(-3deg); }
+      75% { transform: translate(15px,35px) rotate(4deg); }
+    }
+    .legal-hero-content { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; padding: 0 24px; }
+    .legal-hero-badge {
+      display: inline-flex; align-items: center; gap: 8px; padding: 6px 18px;
+      border-radius: 50px; background: rgba(252,216,50,0.12);
+      border: 1px solid rgba(252,216,50,0.25); color: var(--primary);
+      font-weight: 700; font-size: 0.8rem; letter-spacing: 1.5px;
+      text-transform: uppercase; margin-bottom: 20px; animation: fadeInUp 0.6s ease forwards;
+    }
+    .legal-hero h1 {
+      font-size: clamp(2.2rem,5vw,3.2rem); font-weight: 900; color: var(--white);
+      line-height: 1.2; margin-bottom: 16px;
+      animation: fadeInUp 0.6s 0.1s ease forwards; opacity: 0;
+    }
+    .legal-hero h1 .highlight {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .legal-hero-subtitle {
+      font-size: 1.1rem; color: rgba(255,255,255,0.7); max-width: 520px;
+      margin: 0 auto 24px; line-height: 1.8;
+      animation: fadeInUp 0.6s 0.2s ease forwards; opacity: 0;
+    }
+    .legal-hero-meta {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.5); font-size: 0.85rem;
+      animation: fadeInUp 0.6s 0.3s ease forwards; opacity: 0;
+    }
+    .legal-hero-meta i { color: var(--primary); }
+
+    /* Wave divider */
+    .legal-wave { position: relative; margin-top: -2px; line-height: 0; z-index: 2; }
+    .legal-wave svg { width: 100%; height: 80px; display: block; }
+
+    /* ---------- Main Content ---------- */
+    .legal-main { max-width: 860px; margin: 0 auto; padding: 60px 24px 100px; }
+
+    /* Table of Contents */
+    .legal-toc {
+      background: var(--white); border: 1px solid var(--gray-100);
+      border-radius: var(--radius-lg); padding: 32px 36px; margin-bottom: 50px;
+      position: relative; overflow: hidden; box-shadow: var(--shadow-sm);
+      animation: fadeInUp 0.6s 0.4s ease forwards; opacity: 0;
+    }
+    .legal-toc::before {
+      content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+      background: var(--gradient-primary);
+    }
+    .legal-toc h3 {
+      font-size: 1rem; font-weight: 900; color: var(--dark);
+      text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 18px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .legal-toc h3 i { color: var(--secondary); }
+    .legal-toc ol {
+      list-style: none; counter-reset: toc-counter;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px 30px;
+    }
+    .legal-toc li { counter-increment: toc-counter; }
+    .legal-toc a {
+      display: flex; align-items: center; gap: 10px; color: var(--gray-500);
+      font-size: 0.92rem; font-weight: 600; padding: 6px 0;
+      border-radius: var(--radius-sm); transition: var(--transition);
+    }
+    .legal-toc a::before {
+      content: counter(toc-counter, decimal-leading-zero);
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px; border-radius: 50%;
+      background: rgba(62,131,188,0.08); color: var(--secondary);
+      font-size: 0.75rem; font-weight: 900; flex-shrink: 0; transition: var(--transition);
+    }
+    .legal-toc a:hover { color: var(--secondary); }
+    .legal-toc a:hover::before { background: var(--gradient-secondary); color: var(--white); }
+
+    /* Section Cards */
+    .legal-section {
+      background: var(--white); border: 1px solid var(--gray-100);
+      border-radius: var(--radius-lg); padding: 40px 36px; margin-bottom: 24px;
+      position: relative; overflow: hidden; box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .legal-section:hover { box-shadow: var(--shadow-md); border-color: rgba(62,131,188,0.15); }
+    .legal-section-header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+    .legal-section-icon {
+      width: 50px; height: 50px; border-radius: var(--radius-md);
+      background: linear-gradient(135deg, rgba(62,131,188,0.1), rgba(252,216,50,0.1));
+      display: flex; align-items: center; justify-content: center;
+      color: var(--secondary); font-size: 1.2rem; flex-shrink: 0; transition: var(--transition);
+    }
+    .legal-section:hover .legal-section-icon {
+      background: var(--gradient-secondary); color: var(--white);
+      transform: scale(1.05) rotate(-5deg);
+    }
+    .legal-section h2 { font-size: 1.35rem; font-weight: 900; color: var(--dark); line-height: 1.3; }
+    .legal-section p { color: var(--gray-500); font-size: 0.98rem; line-height: 1.85; margin-bottom: 14px; }
+    .legal-section p:last-child { margin-bottom: 0; }
+    .legal-section ul { padding-left: 0; margin: 14px 0; }
+    .legal-section li {
+      position: relative; padding-left: 28px; color: var(--gray-500);
+      font-size: 0.95rem; line-height: 1.8; margin-bottom: 10px;
+    }
+    .legal-section li::before {
+      content: ''; position: absolute; left: 0; top: 10px;
+      width: 8px; height: 8px; border-radius: 50%; background: var(--gradient-primary);
+    }
+    .legal-section li:last-child { margin-bottom: 0; }
+    .legal-section strong { color: var(--dark); }
+
+    /* Info callout */
+    .legal-callout {
+      display: flex; align-items: flex-start; gap: 14px; padding: 18px 20px;
+      background: rgba(62,131,188,0.06); border-left: 4px solid var(--secondary);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin: 18px 0;
+    }
+    .legal-callout i { color: var(--secondary); font-size: 1.1rem; margin-top: 2px; flex-shrink: 0; }
+    .legal-callout p { margin: 0; font-size: 0.92rem; color: var(--gray-700); }
+
+    /* Contact card */
+    .legal-contact-card { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px; }
+    .legal-contact-item {
+      display: flex; align-items: center; gap: 12px; padding: 14px 18px;
+      background: rgba(252,216,50,0.06); border: 1px solid rgba(252,216,50,0.15);
+      border-radius: var(--radius-sm); transition: var(--transition);
+    }
+    .legal-contact-item:hover { background: rgba(252,216,50,0.12); transform: translateY(-2px); }
+    .legal-contact-item i { color: var(--primary-dark); font-size: 1.1rem; }
+    .legal-contact-item span { color: var(--dark); font-weight: 600; font-size: 0.9rem; }
+
+    /* ---------- Back to Home ---------- */
+    .legal-back { text-align: center; padding: 40px 24px 0; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px; padding: 14px 32px;
+      border-radius: 50px; font-family: 'Lato', sans-serif; font-weight: 700;
+      font-size: 0.95rem; cursor: pointer; border: none;
+      transition: var(--transition); position: relative; overflow: hidden;
+    }
+    .btn::after {
+      content: ''; position: absolute; top: 50%; left: 50%; width: 0; height: 0;
+      background: rgba(255,255,255,0.2); border-radius: 50%;
+      transform: translate(-50%,-50%); transition: width 0.5s ease, height 0.5s ease;
+    }
+    .btn:hover::after { width: 300px; height: 300px; }
+    .btn-primary { background: var(--gradient-primary); color: var(--dark); box-shadow: var(--shadow-primary); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(252,216,50,0.35); }
+
+    /* ---------- Footer ---------- */
+    .footer {
+      background: var(--navy);
+      padding: 80px 0 0;
+      position: relative;
+    }
+    .footer-wave {
+      position: absolute;
+      top: -60px;
+      left: 0;
+      width: 100%;
+      line-height: 0;
+    }
+    .footer-wave svg {
+      width: 100%;
+      height: 80px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 50px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-logo {
+      height: 40px;
+      margin-bottom: 0;
+    }
+    .footer-brand p {
+      color: rgba(255,255,255,0.4);
+      font-size: 0.9rem;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+    .footer-socials {
+      display: flex;
+      gap: 10px;
+    }
+    .footer-socials a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.5);
+      transition: var(--transition);
+    }
+    .footer-socials a:hover {
+      background: var(--primary);
+      color: var(--dark);
+      transform: translateY(-3px);
+    }
+    .footer-links h4 {
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 12px;
+    }
+    .footer-links h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 30px;
+      height: 3px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.4);
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+    .footer-links a:hover {
+      color: var(--primary);
+      padding-left: 8px;
+    }
+    .footer-bottom {
+      padding: 24px 0;
+      text-align: center;
+    }
+    .footer-bottom p {
+      color: rgba(255,255,255,0.3);
+      font-size: 0.85rem;
+    }
+
+    /* ---------- Back to Top ---------- */
+    .back-to-top {
+      position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px;
+      border-radius: 50%; background: var(--gradient-primary); color: var(--dark);
+      border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; box-shadow: var(--shadow-primary); opacity: 0; visibility: hidden;
+      transform: translateY(20px); transition: var(--transition); z-index: 999;
+    }
+    .back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+    .back-to-top:hover { transform: translateY(-4px); }
+
+    /* ---------- Animations ---------- */
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 768px) {
+      .nav-toggle { display: flex; }
+      .nav-menu {
+        position: fixed; top: 0; right: -100%; width: 80%; max-width: 360px; height: 100vh;
+        background: var(--dark); flex-direction: column; padding: 100px 30px 40px; gap: 4px;
+        transition: right 0.4s cubic-bezier(0.4,0,0.2,1); box-shadow: -10px 0 40px rgba(0,0,0,0.3);
+      }
+      .nav-menu.active { right: 0; }
+      .nav-link { width: 100%; padding: 14px 20px; }
+      .nav-link.cta-btn { margin-left: 0; margin-top: 16px; text-align: center; justify-content: center; }
+      .legal-hero { padding: 140px 0 60px; }
+      .legal-main { padding: 40px 16px 60px; }
+      .legal-toc ol { grid-template-columns: 1fr; }
+      .legal-section { padding: 28px 24px; }
+      .legal-contact-card { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+    }
+    @media (max-width: 480px) {
+      .legal-hero { padding: 130px 0 50px; }
+      .legal-section-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .legal-hero-badge, .legal-hero h1, .legal-hero-subtitle, .legal-hero-meta,
+      .legal-toc, .fade-in { animation: none; opacity: 1; transform: none; }
+      .legal-hero .shape { animation: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======= NAVBAR ======= -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../../index.html" class="nav-logo">
+        <img src="../../assets/logo.png" alt="De Guzman International Visa Consultancy" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../../index.html" class="nav-link">Home</a></li>
+        <li><a href="../../index.html#about" class="nav-link">About</a></li>
+        <li><a href="../../index.html#services" class="nav-link">Services</a></li>
+        <li><a href="../../index.html#contact" class="nav-link">Contact Us</a></li>
+        <li><a href="../../index.html#contact" class="nav-link cta-btn">Get Visa Assistance</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ======= HERO BANNER ======= -->
+  <section class="legal-hero">
+    <div class="floating-shapes" aria-hidden="true">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="legal-hero-content">
+      <div class="legal-hero-badge">
+        <i class="fas fa-file-contract"></i> Legal Agreement
+      </div>
+      <h1>Terms of <span class="highlight">Service</span></h1>
+      <p class="legal-hero-subtitle">
+        Please read these terms carefully before using our website or engaging our visa consultancy services.
+      </p>
+    </div>
+  </section>
+
+  <div class="legal-wave">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,80 C360,0 1080,140 1440,60 L1440,120 L0,120 Z" fill="#f8f9fb"/>
+    </svg>
+  </div>
+
+  <!-- ======= MAIN CONTENT ======= -->
+  <main class="legal-main">
+
+    <!-- Table of Contents -->
+    <div class="legal-toc">
+      <h3><i class="fas fa-list-ul"></i> Table of Contents</h3>
+      <ol>
+        <li><a href="#acceptance">Acceptance of Terms</a></li>
+        <li><a href="#services-description">Our Services</a></li>
+        <li><a href="#client-responsibilities">Client Responsibilities</a></li>
+        <li><a href="#fees-payment">Fees & Payment</a></li>
+        <li><a href="#disclaimers">Disclaimers</a></li>
+        <li><a href="#limitation-liability">Limitation of Liability</a></li>
+        <li><a href="#intellectual-property">Intellectual Property</a></li>
+        <li><a href="#termination">Termination</a></li>
+        <li><a href="#governing-law">Governing Law</a></li>
+        <li><a href="#tos-contact">Contact Us</a></li>
+      </ol>
+    </div>
+
+    <!-- Section 1 -->
+    <section id="acceptance" class="legal-section fade-in">
+      <div class="legal-section-header">
+        <div class="legal-section-icon"><i class="fas fa-handshake"></i></div>
+        <h2>Acceptance of Terms</h2>
+      </div>
+      <p>By accessing or using the De Guzman International Visa Consultancy (DGIVC) website and services, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use our website or services.</p>
+      <p>These terms apply to all visitors, clients, and any persons who access or use our website and services.</p>
+    </section>
+
+    <!-- Section 2 -->
+    <section id="services-description" class="legal-section fade-in">
+      <div class="legal-section-header">
+        <div class="legal-section-icon"><i class="fas fa-concierge-bell"></i></div>
+        <h2>Our Services</h2>
+      </div>
+      <p>DGIVC provides visa consultancy and assistance services, including but not limited to:</p>
+      <ul>
+        <li>Visa application guidance and document preparation</li>
+        <li>Visa extension and renewal processing</li>
+        <li>Permanent residency application assistance</li>
+        <li>Immigration compliance advisory</li>
+        <li>Balikbayan and dual citizenship application support</li>
+      </ul>
+      <div class="legal-callout">
+        <i class="fas fa-info-circle"></i>
+        <p>DGIVC acts as a consultancy service only. We do not guarantee the approval of any visa or immigration application, as final decisions are made solely by the Bureau of Immigration and other relevant government agencies.</p>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section id="client-responsibilities" class="legal-section fade-in">
+      <div class="legal-section-header">
+        <div class="legal-section-icon"><i class="fas fa-user-check"></i></div>
+        <h2>Client Responsibilities</h2>
+      </div>
+      <p>As a client of DGIVC, you agree to:</p>
+      <ul>
+        <li>Provide accurate, complete, and truthful information for all applications</li>
+        <li>Submit all required documents in a timely manner</li>
+        <li>Inform us of any changes to your personal circumstances that may affect your application</li>
+        <li>Comply with all applicable Philippine immigration laws and regulations</li>
+        <li>Not use our services for any unlawful purpose</li>
+      </ul>
+      <p>Providing false or misleading information may result in the denial of your application and termination of our services.</p>
+    </section>
+
+    <!-- Section 4 -->
+    <section id="fees-payment" class="legal-section fade-in">
+      <div class="legal-section-header">
+        <div class="legal-section-icon"><i class="fas fa-receipt"></i></div>
+        <h2>Fees & Payment</h2>
+      </div>
+      <p>Service fees will be communicated to you prior to the commencement of any work. By engaging our services, you agree to the following:</p>
+      <ul>
+        <li>All fees are quoted in Philippine Pesos (PHP) unless otherwise stated</li>
+        <li>Payment terms will be outlined in your service agreement</li>
+        <li>Government fees and charges are separate from our consultancy fees and are subject to change</li>
+        <li>Refund policies will be communicated on a case-by-case basis depending on the stage of your application</li>
+      </ul>
+      <div class="legal-callout">
+        <i class="fas fa-info-circle"></i>
+        <p>DGIVC reserves the right to adjust service fees with prior notice. Any fee changes will not affect services already in progress under an existing agreement.</p>
+      </div>
+    </section>
+
+    <!-- Section 5 -->
+    <section id="disclaimers" class="legal-section fade-in">
+      <div class="legal-section-header">
+        <div class="legal-section-icon"><i class="fas fa-triangle-exclamation"></i></div>
+        <h2>Disclaimers</h2>
+      </div>
+      <ul>
+        <li>Our website and services are provided on an "as is" and "as available" basis</li>
+        <li>We do not guarantee that our website will be uninterrupted, error-free, or free of viruses or other harmful components</li>
+        <li>Information provided on our website is for general informational purposes only and does not constitute legal advice</li>
+        <li>Processing times mentioned are estimates and may vary depending on government agency workload and other external factors</li>
+      </ul>
+    </section>
+
+    <!-- Section 6 -->
+    <section id="limitation-liability" class="legal-section fade-in">
+      <div class="legal-section-header">
+        <div class="legal-section-icon"><i class="fas fa-scale-balanced"></i></div>
+        <h2>Limitation of Liability</h2>
+      </div>
+      <p>To the fullest extent permitted by Philippine law, DGIVC shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from:</p>
+      <ul>
+        <li>Your use of or inability to use our services</li>
+        <li>Any denial or delay of a visa or immigration application by government authorities</li>
+        <li>Changes in immigration laws, regulations, or government policies</li>
+        <li>Unauthorized access to or alteration of your data</li>
+        <li>Any third-party actions or omissions</li>
+      </ul>
+    </section>
+
+    <!-- Section 7 -->
+    <section id="intellectual-property" class="legal-section fade-in">
+      <div class="legal-section-header">
+        <div class="legal-section-icon"><i class="fas fa-copyright"></i></div>
+        <h2>Intellectual Property</h2>
+      </div>
+      <p>All content on this website, including but not limited to text, graphics, logos, images, and software, is the property of De Guzman International Visa Consultancy and is protected by Philippine intellectual property laws.</p>
+      <p>You may not reproduce, distribute, modify, or create derivative works from any content on this website without our prior written consent.</p>
+    </section>
+
+    <!-- Section 8 -->
+    <section id="termination" class="legal-section fade-in">
+      <div class="legal-section-header">
+        <div class="legal-section-icon"><i class="fas fa-ban"></i></div>
+        <h2>Termination</h2>
+      </div>
+      <p>We reserve the right to suspend or terminate our services to any client who:</p>
+      <ul>
+        <li>Violates any provision of these Terms of Service</li>
+        <li>Provides false or fraudulent information</li>
+        <li>Engages in conduct that is harmful to our business or reputation</li>
+        <li>Fails to meet payment obligations as agreed</li>
+      </ul>
+      <p>Upon termination, any fees owed for services already rendered remain payable.</p>
+    </section>
+
+    <!-- Section 9 -->
+    <section id="governing-law" class="legal-section fade-in">
+      <div class="legal-section-header">
+        <div class="legal-section-icon"><i class="fas fa-gavel"></i></div>
+        <h2>Governing Law</h2>
+      </div>
+      <p>These Terms of Service shall be governed by and construed in accordance with the laws of the Republic of the Philippines. Any disputes arising from these terms shall be resolved in the appropriate courts of the Philippines.</p>
+      <p>We may update these Terms of Service from time to time. Any changes will be posted on this page with an updated effective date. Continued use of our services after changes constitutes acceptance of the revised terms.</p>
+    </section>
+
+    <!-- Section 10 -->
+    <section id="tos-contact" class="legal-section fade-in">
+      <div class="legal-section-header">
+        <div class="legal-section-icon"><i class="fas fa-envelope-open-text"></i></div>
+        <h2>Contact Us</h2>
+      </div>
+      <p>If you have any questions about these Terms of Service, please contact us:</p>
+      <div class="legal-contact-card">
+        <a href="mailto:shawiedginternational@gmail.com" class="legal-contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>shawiedginternational@gmail.com</span>
+        </a>
+        <a href="tel:+639085375177" class="legal-contact-item">
+          <i class="fas fa-phone"></i>
+          <span>+639 085 375 177</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Back to Home -->
+    <div class="legal-back">
+      <a href="../../index.html" class="btn btn-primary">
+        <i class="fas fa-arrow-left"></i> Back to Homepage
+      </a>
+    </div>
+
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+        <path d="M0,64 C288,120 576,10 864,64 C1152,120 1296,40 1440,80 L1440,150 L0,150 Z" fill="#0a1628"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../../assets/logo.png" alt="DGIVC Logo" class="footer-logo" />
+          <p>Your trusted partner in navigating the world of international immigration and visa processing.</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/profile.php?id=61577828194156" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/shawie-de-guzman-29646615a/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../../index.html#home">Home</a></li>
+            <li><a href="../../index.html#about">About Us</a></li>
+            <li><a href="../../index.html#why-choose">Why Choose Us</a></li>
+            <li><a href="../../index.html#reviews">Testimonials</a></li>
+            <li><a href="../../index.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="../../index.html#contact">Tourist Visa</a></li>
+            <li><a href="../../index.html#contact">Work Visa</a></li>
+            <li><a href="../../index.html#contact">Student Visa</a></li>
+            <li><a href="../../index.html#contact">Permanent Residency</a></li>
+            <li><a href="../../index.html#contact">Spouse Visa</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../privacy-policy/">Privacy Policy</a></li>
+            <li><a href="../terms-of-service/">Terms of Service</a></li>
+            <li><a href="../cookie-policy/">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 De Guzman International Visa Consultancy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+      document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+    });
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, { rootMargin: '0px 0px -60px 0px', threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => { backToTop.classList.toggle('visible', window.scrollY > 400); }, { passive: true });
+    backToTop.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  </script>
+</body>
+</html>
