@@ -1,58 +1,269 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You — De Guzman International Visa Consultancy</title>
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    /* ---------- Variables & Reset ---------- */
+    :root {
+      --primary: #FCD832;
+      --primary-dark: #e0bf00;
+      --secondary: #3E83BC;
+      --secondary-dark: #2a6699;
+      --secondary-light: #5ba0d9;
+      --dark: #0f1b2d;
+      --dark-2: #162236;
+      --dark-3: #1a2a42;
+      --navy: #0a1628;
+      --white: #ffffff;
+      --off-white: #f8f9fb;
+      --gray-100: #eef1f5;
+      --gray-300: #b0b8c5;
+      --gray-500: #6b7a8d;
+      --gray-700: #3a4553;
+      --gradient-primary: linear-gradient(135deg, var(--primary) 0%, #f0c800 100%);
+      --shadow-primary: 0 8px 30px rgba(252, 216, 50, 0.25);
+      --radius-md: 12px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-    <link rel="stylesheet" type="text/css" href="../../css/app.css">
-    <link rel="icon" href="../../images/favicon.ico">
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <title>Thank you for reaching out to us!</title>
+    html, body {
+      height: 100%;
+    }
 
-  </head>
+    body {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
 
-  <body>
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
 
-    <!--wrapper-->
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
 
-    <div class="main-wrapper">
+    /* ---------- Thank You Page ---------- */
+    .thank-you-page {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1a3a5c 0%, #2a6699 40%, #5ba0d9 100%);
+      overflow: hidden;
+    }
 
-      <!-- navbar -->
+    /* Background image */
+    .thank-you-page::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        url('https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=1920&q=80')
+        center / cover no-repeat;
+      opacity: 0.35;
+      animation: none;
+    }
 
-      <div class="main-nav -static">
-        <div class="main-con -nav">
-          <!-- logo -->
-          <div>
-            <a class="logo-link" href="/">
-              <img src="../../images/logo.png"/>
-            </a>
-          </div>
-          <!-- end logo -->
-        </div>
-      </div>
+    /* Teal/blue overlay */
+    .thank-you-page::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(20, 60, 90, 0.75) 0%, rgba(42, 102, 153, 0.6) 50%, rgba(91, 160, 217, 0.4) 100%);
+    }
 
-      <!-- end navbar -->
+    /* ---------- Logo ---------- */
+    .thank-you-logo {
+      position: absolute;
+      top: 28px;
+      left: 32px;
+      z-index: 10;
+    }
 
-      <!-- jumbo banner -->
-      <div class="jumbo-banner -thankyou">
-        <div class="main-con">
-          <h1 class="head">Thanks for reaching out!</h1>
-          <h2 class="subhead">We’ve received your message and will get back to you as soon as possible. Expect a response shortly!</h2> 
-          <a class="main-btn -thankyou" href="/">Back to Homepage</a>
-        </div>
-      </div>
-      <!-- end jumbo banner -->
+    .thank-you-logo img {
+      height: 44px;
+    }
 
+    /* ---------- Content ---------- */
+    .thank-you-content {
+      position: relative;
+      z-index: 5;
+      text-align: left;
+      max-width: 640px;
+      padding: 40px 32px;
+    }
+
+    .thank-you-content h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: var(--white);
+    }
+
+    .thank-you-content p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 36px;
+      max-width: 520px;
+      line-height: 1.8;
+    }
+
+    /* ---------- Button ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 36px;
+      border-radius: 8px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary {
+      background: var(--gradient-primary);
+      color: var(--dark);
+      box-shadow: var(--shadow-primary);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(252, 216, 50, 0.35);
+    }
+
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.5s ease, height 0.5s ease;
+    }
+
+    .btn:hover::after {
+      width: 300px;
+      height: 300px;
+    }
+
+    /* ---------- Animations ---------- */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+    .thank-you-content h1 {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .thank-you-content p {
+      animation: fadeInUp 0.8s 0.2s ease forwards;
+      opacity: 0;
+    }
+
+    .thank-you-content .btn {
+      animation: fadeInUp 0.8s 0.4s ease forwards;
+      opacity: 0;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 768px) {
+      .thank-you-content {
+        padding: 32px 24px;
+        text-align: center;
+      }
+
+      .thank-you-content p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .thank-you-logo {
+        top: 20px;
+        left: 20px;
+      }
+
+      .thank-you-logo img {
+        height: 36px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .thank-you-content {
+        padding: 24px 20px;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .thank-you-content h1,
+      .thank-you-content p,
+      .thank-you-content .btn {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="thank-you-page">
+    <!-- Logo -->
+    <a href="../index.html" class="thank-you-logo">
+      <img src="../../assets/logo.png" alt="De Guzman International Visa Consultancy" />
+    </a>
+
+    <!-- Content -->
+    <div class="thank-you-content">
+      <h1>Thanks for reaching out!</h1>
+      <p>We've received your message and will get back to you as soon as possible. Expect a response shortly!</p>
+      <a href="../index.html" class="btn btn-primary">
+        Back to Homepage
+      </a>
     </div>
-
-    <!-- end wrapper -->
-
-    <!-- javascripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
-    <script src="../../js/app.js"></script>
-
-  </body>
-
+  </main>
+</body>
 </html>
-

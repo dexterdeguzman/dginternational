@@ -1,424 +1,618 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>De Guzman International Visa Consultancy</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17623351051"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-    <link rel="stylesheet" type="text/css" href="css/app.css" />
-    <link rel="icon" href="images/favicon.ico" />
+    gtag('config', 'AW-17623351051');
+  </script>
+</head>
+<body>
+  <!-- ======= NAVBAR ======= -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-logo">
+        <img src="assets/logo.png" alt="De Guzman International Visa Consultancy" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link">Contact Us</a></li>
+        <li><a href="#contact" class="nav-link cta-btn">Get Visa Assistance</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      crossorigin="anonymous"
-    ></script>
+  <!-- ======= HERO / BANNER ======= -->
+  <section class="hero" id="home">
+    <!-- Parallax background layers -->
+    <div class="hero-parallax-bg"></div>
+    <div class="hero-overlay"></div>
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-17623351051"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "AW-17623351051");
-    </script>
-
-    <title>De Guzman International Visa Consultancy</title>
-  </head>
-
-  <body>
-    <!--wrapper-->
-
-    <div class="main-wrapper">
-      <!-- navbar -->
-
-      <div class="main-nav">
-        <div class="main-con -nav">
-          <!-- logo -->
-          <div>
-            <a class="logo-link" href="/">
-              <img src="images/logo.png" />
-            </a>
-          </div>
-          <!-- end logo -->
-
-          <!-- menu burger -->
-          <span class="menu-burger" id="menuBurger"> </span>
-          <!-- end menu burger -->
-
-          <!-- nav list -->
-          <ul class="nav-list" id="topNavList">
-            <li>
-              <a class="nav-link" href="/">Home</a>
-            </li>
-            <li>
-              <a class="nav-link" id="aboutLnk" href="#aboutSec">About</a>
-            </li>
-            <li>
-              <a
-                class="nav-link"
-                id="visaAssistanceLnk"
-                href="#visaAssistanceSec"
-                >Contact Us</a
-              >
-            </li>
-            <li>
-              <a class="nav-link" href="pages/privacy-policy/"
-                >Privacy Policy</a
-              >
-            </li>
-            <li>
-              <a
-                class="main-btn"
-                id="visaAssistanceSml"
-                href="#visaAssistanceSec"
-                >Get visa assistance</a
-              >
-            </li>
-          </ul>
-          <!-- end navlist -->
-        </div>
-      </div>
-
-      <!-- end navbar -->
-
-      <!-- jumbo banner -->
-      <div class="jumbo-banner -home">
-        <div class="main-con">
-          <h1 class="head">Visa Solutions Made Simple</h1>
-          <h2 class="subhead">
-            Providing efficient and timely visa assistance services for clients
-            of various nationalities in the Philippines.
-          </h2>
-          <a
-            class="main-btn -jumbo"
-            id="visaAssistanceBG"
-            href="#visaAssistanceSec"
-            >Get visa assistance</a
-          >
-        </div>
-      </div>
-      <!-- end jumbo banner -->
-
-      <!-- about content -->
-
-      <div class="dim-section" id="aboutSec">
-        <div class="main-con">
-          <!-- header -->
-          <div class="main-header">
-            <h2 class="head">
-              Your Trusted Partner for Philippine Visa Services
-            </h2>
-            <h3 class="subhead">
-              Navigating Philippine visa applications can be complex and
-              time-consuming. With changing regulations and extensive paperwork,
-              expert guidance is key to a successful process.
-            </h3>
-          </div>
-          <!-- end header -->
-
-          <!-- content -->
-          <div class="about-content">
-            <a class="panel" href="#">
-              <div class="imageSection">
-                <img src="images/short-term-visa.svg" />
-              </div>
-              <div class="head">Short Term Visas</div>
-              <div class="desc">
-                Complete assistance for tourist visa processing and
-                documentation
-              </div>
-            </a>
-            <a class="panel" href="#">
-              <div class="imageSection">
-                <img src="images/short-term-visa.svg" />
-              </div>
-              <div class="head">Philippines Work Visas</div>
-              <div class="desc">
-                Complete assistance for tourist visa processing and
-                documentation
-              </div>
-            </a>
-            <a class="panel" href="#">
-              <div class="imageSection">
-                <img src="images/short-term-visa.svg" />
-              </div>
-              <div class="head">Permanent Visas</div>
-              <div class="desc">
-                Complete assistance for tourist visa processing and
-                documentation
-              </div>
-            </a>
-            <a class="panel" href="#">
-              <div class="imageSection">
-                <img src="images/short-term-visa.svg" />
-              </div>
-              <div class="head">Other services</div>
-              <div class="desc">
-                Complete assistance for tourist visa processing and
-                documentation
-              </div>
-            </a>
-          </div>
-
-          <!-- end content -->
-
-          <!-- why section -->
-
-          <div class="why-section">
-            <div class="leftSection">
-              <div class="head">
-                Why Choose De Guzman International Visa Consultancy?
-              </div>
-              <p class="desc">
-                We understand that each visa application is unique, which is why
-                we provide personalized service tailored to your specific
-                circumstances. Whether you’re applying for a tourist visa, work
-                visas or permanent residencies, DGI Visa Consultancy will guide
-                you through every step of the process.
-              </p>
-              <p class="desc -highlight">
-                Let us simplify your visa application journey and help you
-                achieve your goals in the Philippines.
-              </p>
-
-              <!-- about snippets -->
-              <div class="about-snippets">
-                <div class="panel">
-                  <div class="head">8+ Years Experience</div>
-                  <div class="subhead">
-                    Extensive experience in the Philippine visa industry
-                  </div>
-                </div>
-                <div class="panel">
-                  <div class="head">Trusted Service</div>
-                  <div class="subhead">
-                    Earned trust of numerous expatriates and companies
-                  </div>
-                </div>
-                <div class="panel">
-                  <div class="head">Efficient & Timely</div>
-                  <div class="subhead">
-                    Quick and reliable visa provider for all expats living and
-                    staying in the Philippines.
-                  </div>
-                </div>
-                <div class="panel">
-                  <div class="head">Quality Focused</div>
-                  <div class="subhead">
-                    Passionate about providing exceptional service to all our
-                    valued clients
-                  </div>
-                </div>
-              </div>
-              <!-- end about snippets -->
-            </div>
-            <div class="rightSection">
-              <img src="images/why-dgi-banner.png" />
-            </div>
-          </div>
-
-          <!-- end why section -->
-        </div>
-      </div>
-
-      <!-- end about content -->
-
-      <!-- contact-section -->
-
-      <div class="main-con" id="visaAssistanceSec">
-        <!-- header -->
-        <div class="main-header">
-          <h2 class="head">Contact Us</h2>
-          <h3 class="subhead">
-            Ready to start your visa application process? Get in touch with us
-            today and let our experienced team guide you through every step.
-          </h3>
-        </div>
-        <!-- end header -->
-
-        <!-- contact section -->
-
-        <div class="contact-section">
-          <div class="leftSection">
-            <div class="head">Get In Touch</div>
-
-            <!-- contact list -->
-            <ul class="contact-list">
-              <li>
-                <img src="images/phone.svg" />
-                <div class="contactDetails">
-                  <div class="head">Phone</div>
-                  <div class="details">+639 085 375 177</div>
-                </div>
-              </li>
-
-              <li>
-                <img src="images/email.svg" />
-                <div class="contactDetails">
-                  <div class="head">Email</div>
-                  <div class="details">shawiedginternational@gmail.com</div>
-                </div>
-              </li>
-
-              <li>
-                <img src="images/location.svg" />
-                <div class="contactDetails">
-                  <div class="head">Location</div>
-                  <div class="details">Philippines Serving Nationwide</div>
-                </div>
-              </li>
-
-              <li>
-                <img src="images/business-hours.svg" />
-                <div class="contactDetails">
-                  <div class="head">Business Hours</div>
-                  <div class="details">Mon - Fri: 9:00 AM - 6:00 PM</div>
-                </div>
-              </li>
-            </ul>
-            <!-- end contact list -->
-
-            <div class="contactWhy">
-              <div class="head">Why Choose Us?</div>
-              <ul>
-                <li>• 8+ years of visa industry experience</li>
-                <li>• Personalized service for each client</li>
-                <li>• Quick response and processing</li>
-                <li>• Competitive and transparent pricing</li>
-                <li>• Support for all visa types and nationalities</li>
-                <li>• Free Visa Consultation</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="contact-form">
-            <div class="head">
-              <img src="images/send.svg" />
-              <span>Send Us Your Inquiry</span>
-            </div>
-            <form
-              class="mainForm"
-              action="https://api.web3forms.com/submit"
-              method="POST"
-            >
-              <!-- Params -->
-              <input
-                type="hidden"
-                name="access_key"
-                value="1020194d-bb82-4e9c-987f-bd45b27df8db"
-              />
-              <input
-                type="hidden"
-                name="subject"
-                value="New Inquiry from DGI Website"
-              />
-              <input
-                type="hidden"
-                name="from_name"
-                value="De Guzman International Visa Consultancy Website"
-              />
-              <input
-                type="hidden"
-                name="redirect"
-                value="https://www.deguzmaninternational.com/pages/thank-you/"
-              />
-
-              <label for="fullname">Full Name: *</label>
-              <input type="text" id="fullname" name="Full Name" required />
-
-              <label for="email">Email Address: *</label>
-              <input type="email" id="email" name="Email" required />
-
-              <label for="phone">Phone Number: *</label>
-              <input type="text" id="phone" name="Phone" required />
-
-              <label for="nationality">Nationality: *</label>
-              <input type="text" id="nationality" name="Nationality" required />
-
-              <label for="visaType">Type of Visa Needed</label>
-              <input
-                type="text"
-                id="visaType"
-                name="Visa Type"
-                placeholder="e.g. Tourist, Work, Business, Student"
-              />
-
-              <label for="message">Message: *</label>
-              <textarea
-                id="message"
-                name="Message"
-                rows="8"
-                required
-              ></textarea>
-
-              <button class="main-btn -contact" type="submit">
-                Send Inquiry
-              </button>
-            </form>
-          </div>
-        </div>
-
-        <!-- end contact section -->
-      </div>
-
-      <!-- end contact section -->
-
-      <!-- footer -->
-      <div class="main-footer">
-        <div class="main-con -footer">
-          <div class="first">
-            <a class="footerLink" href=""
-              ><img class="footerLogo" src="images/footer-logo.png"
-            /></a>
-            <div class="footerNote">
-              Professional visa consultation services for expatriates in the
-              Philippines. Your trusted partner for all visa-related needs.
-            </div>
-          </div>
-          <div class="second">
-            <div class="head">EXPLORE</div>
-            <ul class="footerList">
-              <li><a class="footerLink" href="">Home</a></li>
-              <li><a class="footerLink" href="">About</a></li>
-              <li><a class="footerLink" href="">Contact Us</a></li>
-            </ul>
-          </div>
-          <div class="third">
-            <div class="head">CONTACT INFORMATION</div>
-            <ul class="footerList">
-              <li><img src="images/phone-white.svg" /> +639 085 375 177</li>
-              <li>
-                <img
-                  src="images/email-white.svg"
-                />shawiedginternational@gmail.com
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- footer note -->
-      <div class="main-con -footerNote">
-        <p>
-          &copy; <span id="footerYear"></span> De Guzman International Visa
-          Consultancy. All rights reserved.
-        </p>
-      </div>
-      <!-- end footer note -->
-
-      <!-- end footer -->
+    <!-- Animated floating shapes -->
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+      <div class="shape shape-5"></div>
+      <div class="shape shape-6"></div>
     </div>
 
-    <!-- end wrapper -->
+    <!-- Animated plane path -->
+    <div class="plane-path">
+      <svg class="plane-svg" viewBox="0 0 1440 400" preserveAspectRatio="none">
+        <path class="flight-path" d="M-50,350 Q300,50 720,200 T1490,80" fill="none" stroke="rgba(252,216,50,0.25)" stroke-width="2" stroke-dasharray="12 8"/>
+      </svg>
+      <div class="plane-icon"><i class="fas fa-plane"></i></div>
+    </div>
 
-    <!-- javascripts -->
+    <div class="container hero-content">
+      <div class="hero-badge fade-up">Trusted Visa Expert</div>
+      <h1 class="hero-title fade-up delay-1">
+        Visa Solutions<br />
+        <span class="highlight">Made Simple</span>
+      </h1>
+      <p class="hero-subtitle fade-up delay-2">
+        Providing efficient and timely visa assistance services for clients of various nationalities in the Philippines.
+        From tourist visas to permanent residency — we guide you every step of the way.
+      </p>
+      <div class="hero-btns fade-up delay-3">
+        <a href="#contact" class="btn btn-primary">
+          <i class="fas fa-paper-plane"></i> Get Visa Assistance
+        </a>
+        <a href="#about" class="btn btn-outline">
+          <i class="fas fa-info-circle"></i> Learn More
+        </a>
+      </div>
+      <div class="hero-stats fade-up delay-4">
+        <div class="stat">
+          <span class="stat-number" data-target="1000">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Visas Processed</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-target="98">0</span><span class="stat-plus">%</span>
+          <span class="stat-label">Success Rate</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-target="8">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Countries Served</span>
+        </div>
+      </div>
+    </div>
 
-    <script src="js/app.js"></script>
-  </body>
+    <div class="hero-scroll-indicator">
+      <a href="#about"><span></span></a>
+    </div>
+  </section>
+
+  <!-- ======= ABOUT SECTION ======= -->
+  <section class="about" id="about">
+    <div class="section-shape-top">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,80 C360,0 1080,140 1440,60 L1440,0 L0,0 Z" />
+      </svg>
+    </div>
+
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Who We Are</span>
+        <h2 class="section-title">About <span class="highlight">DGIVC</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image fade-left">
+          <div class="about-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&q=80" alt="Professional team meeting" loading="lazy" />
+            <div class="about-img-accent"></div>
+          </div>
+          <div class="experience-badge">
+            <span class="exp-number">8+</span>
+            <span class="exp-text">Years of<br />Experience</span>
+          </div>
+        </div>
+
+        <div class="about-content fade-right">
+          <h3>Your Trusted Partner for <span class="highlight">Philippine Visa Services</span></h3>
+          <p>
+            Navigating Philippine visa applications can be complex and time-consuming. With changing regulations and
+            extensive paperwork, expert guidance is key to a successful process.
+          </p>
+          <p>
+            We understand that the immigration process can be complex and overwhelming. That's why we provide
+            personalized, end-to-end guidance — from document preparation to application submission and beyond.
+          </p>
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+              <div>
+                <strong>Licensed & Accredited</strong>
+                <span>Fully certified immigration consultants</span>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+              <div>
+                <strong>Personalized Service</strong>
+                <span>Tailored solutions for every client</span>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="feature-icon"><i class="fas fa-globe"></i></div>
+              <div>
+                <strong>Global Reach</strong>
+                <span>Partnerships across 50+ countries</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= WHY CHOOSE US ======= -->
+  <section class="why-choose" id="why-choose">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Our Advantage</span>
+        <h2 class="section-title">Why Choose <span class="highlight">DGIVC</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">
+          We go beyond just processing applications — we are your dedicated partner throughout
+          your entire immigration journey.
+        </p>
+      </div>
+
+      <div class="why-choose-grid">
+        <div class="why-choose-left">
+          <div class="why-choose-copy fade-up">
+            <p>
+              Every visa application is different. We tailor each case to your background, travel goals, and timeline,
+              ensuring the right documentation and strategy from start to finish.
+            </p>
+            <p>
+              From tourist visas to permanent residency, our team handles the details so you can focus on your journey.
+            </p>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-card fade-up delay-1">
+              <div class="feature-card-icon">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <h4>8+ Years Experience</h4>
+              <p>Extensive experience in the Philippine visa industry.</p>
+              <div class="feature-card-number">01</div>
+            </div>
+
+            <div class="feature-card fade-up delay-2">
+              <div class="feature-card-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <h4>Trusted Service</h4>
+              <p>Earned trust of numerous expatriates and comanies.</p>
+              <div class="feature-card-number">02</div>
+            </div>
+
+            <div class="feature-card fade-up delay-3">
+              <div class="feature-card-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h4>Efficient & Timely</h4>
+              <p>Quick and reliable visa provider for all expats living and staying in the Philippines.</p>
+              <div class="feature-card-number">03</div>
+            </div>
+
+            <div class="feature-card fade-up delay-1">
+              <div class="feature-card-icon">
+                <i class="fas fa-headset"></i>
+              </div>
+              <h4>Quality Focused</h4>
+              <p>Passionate about providing exceptional service to all our valued clients.</p>
+              <div class="feature-card-number">04</div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="why-choose-right">
+          <div class="why-choose-photo-wrap fade-up">
+            <img class="why-choose-photo" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&h=1100&fit=crop&q=80" alt="Visa consultation with professional advisors" loading="lazy" />
+            <span class="why-choose-float float-1" aria-hidden="true"></span>
+            <span class="why-choose-float float-2" aria-hidden="true"></span>
+            <span class="why-choose-float float-3" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= SERVICES MARQUEE ======= -->
+  <section class="services-marquee">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span><i class="fas fa-passport"></i> Tourist Visa</span>
+        <span><i class="fas fa-briefcase"></i> Work Visa</span>
+        <span><i class="fas fa-graduation-cap"></i> Student Visa</span>
+        <span><i class="fas fa-home"></i> Permanent Residency</span>
+        <span><i class="fas fa-ring"></i> Spouse Visa</span>
+        <span><i class="fas fa-building"></i> Business Visa</span>
+        <span><i class="fas fa-plane-departure"></i> Transit Visa</span>
+        <span><i class="fas fa-heart"></i> Family Reunion</span>
+        <span><i class="fas fa-passport"></i> Tourist Visa</span>
+        <span><i class="fas fa-briefcase"></i> Work Visa</span>
+        <span><i class="fas fa-graduation-cap"></i> Student Visa</span>
+        <span><i class="fas fa-home"></i> Permanent Residency</span>
+        <span><i class="fas fa-ring"></i> Spouse Visa</span>
+        <span><i class="fas fa-building"></i> Business Visa</span>
+        <span><i class="fas fa-plane-departure"></i> Transit Visa</span>
+        <span><i class="fas fa-heart"></i> Family Reunion</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= SERVICES ======= -->
+  <section class="services" id="services">
+    <!-- Decorative floating shapes -->
+    <div class="services-bg-shapes" aria-hidden="true">
+      <div class="services-shape services-shape-1"></div>
+      <div class="services-shape services-shape-2"></div>
+      <div class="services-shape services-shape-3"></div>
+    </div>
+
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Services</span>
+        <h2 class="section-title">Your Trusted Partner for <span class="highlight">Philippine Visa Services</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">
+          Navigating Philippine visa applications can be complex and time-consuming. With changing regulations and
+          extensive paperwork, expert guidance is key to a successful process.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Card 1: Short Term Visas -->
+        <a class="service-card fade-up delay-1" href="#contact">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=600&h=400&fit=crop&q=80" alt="Tourist exploring a scenic destination" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+          </div>
+          <div class="service-icon-badge">
+            <i class="fas fa-passport"></i>
+          </div>
+          <div class="service-card-body">
+            <h4>Short Term Visas</h4>
+            <p>Tourist visa (9a), transit visas, and short-stay permits for visiting the Philippines with hassle-free processing.</p>
+            <span class="service-card-link">Learn More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- Card 2: Work Visas -->
+        <a class="service-card fade-up delay-2" href="#contact">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop&q=80" alt="Professional working at a desk" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+          </div>
+          <div class="service-icon-badge">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="service-card-body">
+            <h4>Philippines Work Visas</h4>
+            <p>Alien Employment Permits (AEP), 9(g) pre-arranged employment visas, and Special Work Permits for foreign professionals.</p>
+            <span class="service-card-link">Learn More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- Card 3: Permanent Visas -->
+        <a class="service-card fade-up delay-3" href="#contact">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&q=80" alt="House keys representing permanent residency" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+          </div>
+          <div class="service-icon-badge">
+            <i class="fas fa-house"></i>
+          </div>
+          <div class="service-card-body">
+            <h4>Permanent Visas</h4>
+            <p>SRRV, 13(a) quota visas, and permanent residency applications for those looking to settle in the Philippines long-term.</p>
+            <span class="service-card-link">Learn More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- Card 4: Visa Extensions & Renewals -->
+        <a class="service-card fade-up delay-1" href="#contact">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop&q=80" alt="Documents and paperwork on a desk" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+          </div>
+          <div class="service-icon-badge">
+            <i class="fas fa-clock-rotate-left"></i>
+          </div>
+          <div class="service-card-body">
+            <h4>Visa Extensions & Renewals</h4>
+            <p>Seamless processing for tourist visa extensions, ACR I-Cards, ECC clearances, and overstay compliance documentation.</p>
+            <span class="service-card-link">Learn More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- Card 5: Inbound Immigrant Visa Processing -->
+        <a class="service-card fade-up delay-2" href="#contact">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=600&h=400&fit=crop&q=80" alt="Airplane arriving at destination" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+          </div>
+          <div class="service-icon-badge">
+            <i class="fas fa-plane-arrival"></i>
+          </div>
+          <div class="service-card-body">
+            <h4>Inbound Visa Processing</h4>
+            <p>End-to-end assistance for foreign nationals relocating to the Philippines — from entry visas to Bureau of Immigration requirements.</p>
+            <span class="service-card-link">Learn More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- Card 6: Balikbayan & Dual Citizenship -->
+        <a class="service-card fade-up delay-3" href="#contact">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1524850011238-e3d235c7d4c9?w=600&h=400&fit=crop&q=80" alt="Philippine flag and travel documents" loading="lazy">
+            <div class="service-card-img-overlay"></div>
+          </div>
+          <div class="service-icon-badge">
+            <i class="fas fa-id-card"></i>
+          </div>
+          <div class="service-card-body">
+            <h4>Balikbayan & Dual Citizenship</h4>
+            <p>Balikbayan privilege verification, dual citizenship applications under RA 9225, and re-acquisition of Filipino citizenship.</p>
+            <span class="service-card-link">Learn More <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= PARALLAX BANNER ======= -->
+  <section class="parallax-banner">
+    <div class="parallax-bg" data-speed="0.5"></div>
+    <div class="parallax-overlay"></div>
+    <div class="container parallax-content fade-up">
+      <h2>Ready to Start Your Journey?</h2>
+      <p>Join thousands of satisfied clients who trusted DGIVC to make their global ambitions a reality.</p>
+      <a href="#contact" class="btn btn-primary btn-lg">
+        <i class="fas fa-paper-plane"></i> Get Visa Assistance
+      </a>
+    </div>
+  </section>
+
+  <!-- ======= REVIEWS / TESTIMONIALS (Google Reviews) ======= -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Testimonials</span>
+        <h2 class="section-title">What Our <span class="highlight">Clients Say</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">
+          Real reviews from our valued clients on Google.
+        </p>
+      </div>
+
+      <script src="https://widget.trustmary.com/AEMDTjEhc"></script>
+    </div>
+  </section>
+
+  <!-- ======= CONTACT SECTION ======= -->
+  <section class="contact" id="contact">
+    <div class="section-shape-top">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,40 C480,120 960,0 1440,80 L1440,0 L0,0 Z" fill="#f8f9fb"/>
+      </svg>
+    </div>
+
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact <span class="highlight">Us</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">
+          Ready to take the next step? Reach out to us for a free initial consultation.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info fade-left">
+          <div class="contact-info-card">
+            <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+            <div>
+              <h5>Location</h5>
+              <p>Philippines, serving nationwide</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon"><i data-lucide="phone"></i></div>
+            <div>
+              <h5>Phone</h5>
+              <p>+639 085 375 177</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon"><i data-lucide="mail"></i></div>
+            <div>
+              <h5>Email us</h5>
+              <p>shawiedginternational@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon"><i data-lucide="clock"></i></div>
+            <div>
+              <h5>Business hours</h5>
+              <p>Monday – Friday: 9:00 AM – 6:00 PM</p>
+            </div>
+          </div>
+
+          <div class="contact-highlights">
+            <h4>Why Choose Us?</h4>
+            <ul>
+              <li>8+ years of visa industry experience</li>
+              <li>Personalized service for each client</li>
+              <li>Quick response and processing</li>
+              <li>Competitive and transparent pricing</li>
+              <li>Support for all visa types and nationalities</li>
+              <li>Free Visa Consultation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper fade-right">
+          <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Params -->
+            <input
+              type="hidden"
+              name="access_key"
+              value="1020194d-bb82-4e9c-987f-bd45b27df8db"
+            />
+            <input
+              type="hidden"
+              name="subject"
+              value="New Inquiry from DGI Website"
+            />
+            <input
+              type="hidden"
+              name="from_name"
+              value="De Guzman International Visa Consultancy Website"
+            />
+            <input
+              type="hidden"
+              name="redirect"
+              value="https://www.deguzmaninternational.com/pages/thank-you/"
+            />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="John" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Doe" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+63 917 123 4567" required/>
+            </div>
+            <div class="form-group">
+              <label for="nationality">Nationality: *</label>
+              <input type="text" id="nationality" name="nationality" placeholder="Filipino" required />
+            </div>
+            <div class="form-group">
+              <label for="visaType">Visa Type</label>
+              <select id="visaType" name="visaType">
+                <option value="" disabled selected>Select visa type</option>
+                <option value="tourist">Tourist Visa</option>
+                <option value="work">Work Visa</option>
+                <option value="student">Student Visa</option>
+                <option value="permanent">Permanent Residency</option>
+                <option value="spouse">Spouse / Partner Visa</option>
+                <option value="business">Business Visa</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your visa needs..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+        <path d="M0,64 C288,120 576,10 864,64 C1152,120 1296,40 1440,80 L1440,150 L0,150 Z" fill="#0a1628"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="DGIVC Logo" class="footer-logo" />
+          <p>Your trusted partner in navigating the world of international immigration and visa processing.</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/profile.php?id=61577828194156" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/shawie-de-guzman-29646615a/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#why-choose">Why Choose Us</a></li>
+            <li><a href="#reviews">Testimonials</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#contact">Tourist Visa</a></li>
+            <li><a href="#contact">Work Visa</a></li>
+            <li><a href="#contact">Student Visa</a></li>
+            <li><a href="#contact">Permanent Residency</a></li>
+            <li><a href="#contact">Spouse Visa</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="pages/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="pages/terms-of-service/">Terms of Service</a></li>
+            <li><a href="pages/cookie-policy/">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 De Guzman International Visa Consultancy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="script.js"></script>
+</body>
 </html>

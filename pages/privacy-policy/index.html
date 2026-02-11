@@ -1,169 +1,1057 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — De Guzman International Visa Consultancy</title>
+  <link rel="icon" type="image/png" href="../../assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    /* ---------- Variables & Reset ---------- */
+    :root {
+      --primary: #FCD832;
+      --primary-dark: #e0bf00;
+      --secondary: #3E83BC;
+      --secondary-dark: #2a6699;
+      --secondary-light: #5ba0d9;
+      --dark: #0f1b2d;
+      --dark-2: #162236;
+      --dark-3: #1a2a42;
+      --navy: #0a1628;
+      --white: #ffffff;
+      --off-white: #f8f9fb;
+      --gray-100: #eef1f5;
+      --gray-200: #dce1e8;
+      --gray-300: #b0b8c5;
+      --gray-500: #6b7a8d;
+      --gray-700: #3a4553;
+      --gradient-primary: linear-gradient(135deg, var(--primary) 0%, #f0c800 100%);
+      --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+      --gradient-dark: linear-gradient(180deg, var(--dark) 0%, var(--navy) 100%);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 8px 30px rgba(0,0,0,0.12);
+      --shadow-lg: 0 20px 60px rgba(0,0,0,0.15);
+      --shadow-primary: 0 8px 30px rgba(252,216,50,0.25);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 30px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-    <link rel="stylesheet" type="text/css" href="../../css/app.css">
-    <link rel="icon" href="../../images/favicon.ico">
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <title>Privacy Policy | De Guzman International Visa Consultancy</title>
+    html {
+      scroll-behavior: smooth;
+    }
 
-  </head>
+    body {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      color: var(--gray-700);
+      background: var(--off-white);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
 
-  <body>
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
 
-    <!--wrapper-->
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
 
-    <div class="main-wrapper">
+    ul { list-style: none; }
 
-    <!-- navbar -->
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-      <div class="main-nav">
-        <div class="main-con -nav">
-          <!-- logo -->
-          <div>
-            <a class="logo-link" href="/">
-              <img src="../../images/logo.png"/>
-            </a>
-          </div>
-          <!-- end logo -->
+    /* ---------- Navbar ---------- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 10px 0;
+      background: rgba(15, 27, 45, 0.95);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo img {
+      height: 36px;
+    }
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-link {
+      padding: 10px 18px;
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      font-size: 0.9rem;
+      border-radius: 50px;
+      letter-spacing: 0.3px;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--white);
+      background: rgba(255,255,255,0.08);
+    }
+    .nav-link.cta-btn {
+      background: var(--gradient-primary);
+      color: var(--dark);
+      padding: 10px 24px;
+      margin-left: 8px;
+      box-shadow: var(--shadow-primary);
+    }
+    .nav-link.cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 35px rgba(252,216,50,0.3);
+    }
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 1001;
+    }
+    .nav-toggle span {
+      width: 26px;
+      height: 2.5px;
+      background: var(--white);
+      border-radius: 3px;
+      transition: var(--transition);
+    }
+    .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-          <!-- menu burger -->
-          <span class="menu-burger" id="menuBurger">
-          </span>
-          <!-- end menu burger -->
+    /* ---------- Hero Banner ---------- */
+    .privacy-hero {
+      position: relative;
+      padding: 160px 0 80px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .privacy-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=80') center/cover no-repeat;
+      transform: scale(1.05);
+    }
+    .privacy-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,22,40,0.92) 0%, rgba(15,27,45,0.88) 40%, rgba(62,131,188,0.75) 100%);
+    }
+    .privacy-hero .floating-shapes {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .privacy-hero .shape {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.07;
+    }
+    .privacy-hero .shape-1 {
+      width: 300px;
+      height: 300px;
+      background: var(--primary);
+      top: -80px;
+      right: -60px;
+      animation: floatShape 20s ease-in-out infinite;
+    }
+    .privacy-hero .shape-2 {
+      width: 200px;
+      height: 200px;
+      background: var(--secondary);
+      bottom: -40px;
+      left: -60px;
+      animation: floatShape 15s ease-in-out infinite reverse;
+    }
+    .privacy-hero .shape-3 {
+      width: 120px;
+      height: 120px;
+      border: 2px solid rgba(252,216,50,0.2);
+      top: 30%;
+      left: 15%;
+      animation: floatShape 18s ease-in-out infinite 2s;
+    }
+    @keyframes floatShape {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(30px, -40px) rotate(5deg); }
+      50% { transform: translate(-20px, 20px) rotate(-3deg); }
+      75% { transform: translate(15px, 35px) rotate(4deg); }
+    }
+    .privacy-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .privacy-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 18px;
+      border-radius: 50px;
+      background: rgba(252,216,50,0.12);
+      border: 1px solid rgba(252,216,50,0.25);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+    .privacy-hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 16px;
+      animation: fadeInUp 0.6s 0.1s ease forwards;
+      opacity: 0;
+    }
+    .privacy-hero h1 .highlight {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .privacy-hero-subtitle {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 520px;
+      margin: 0 auto 24px;
+      line-height: 1.8;
+      animation: fadeInUp 0.6s 0.2s ease forwards;
+      opacity: 0;
+    }
+    .privacy-hero-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.85rem;
+      animation: fadeInUp 0.6s 0.3s ease forwards;
+      opacity: 0;
+    }
+    .privacy-hero-meta i {
+      color: var(--primary);
+    }
 
-          <!-- nav list -->
-          <ul class="nav-list" id="topNavList">
-            <li>
-              <a class="nav-link" href="/">Home</a>
-            </li>
-<!--             <li>
-              <a class="nav-link" id="aboutLnk" href="#aboutSec">About</a>
-            </li>
-            <li>
-              <a class="nav-link" id="visaAssistanceLnk" href="#visaAssistanceSec">Contact Us</a>
-            </li> -->
-            <li>
-              <a class="nav-link" href="javascript:void(0)">Privacy Policy</a>
-            </li>
-            <li>
-              <a class="main-btn" id="visaAssistanceSml" href="#visaAssistanceSec">Get visa assistance</a>
-            </li>
-          </ul>
-          <!-- end navlist -->
-        </div>
+    /* Wave divider */
+    .privacy-wave {
+      position: relative;
+      margin-top: -2px;
+      line-height: 0;
+      z-index: 2;
+    }
+    .privacy-wave svg {
+      width: 100%;
+      height: 80px;
+      display: block;
+    }
+
+    /* ---------- Main Content ---------- */
+    .privacy-main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    /* Table of Contents */
+    .privacy-toc {
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius-lg);
+      padding: 32px 36px;
+      margin-bottom: 50px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      animation: fadeInUp 0.6s 0.4s ease forwards;
+      opacity: 0;
+    }
+    .privacy-toc::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--gradient-primary);
+    }
+    .privacy-toc h3 {
+      font-size: 1rem;
+      font-weight: 900;
+      color: var(--dark);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .privacy-toc h3 i {
+      color: var(--secondary);
+    }
+    .privacy-toc ol {
+      list-style: none;
+      counter-reset: toc-counter;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 30px;
+    }
+    .privacy-toc li {
+      counter-increment: toc-counter;
+    }
+    .privacy-toc a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gray-500);
+      font-size: 0.92rem;
+      font-weight: 600;
+      padding: 6px 0;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
+    .privacy-toc a::before {
+      content: counter(toc-counter, decimal-leading-zero);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(62,131,188,0.08);
+      color: var(--secondary);
+      font-size: 0.75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+    .privacy-toc a:hover {
+      color: var(--secondary);
+    }
+    .privacy-toc a:hover::before {
+      background: var(--gradient-secondary);
+      color: var(--white);
+    }
+
+    /* Section Cards */
+    .privacy-section {
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .privacy-section:hover {
+      box-shadow: var(--shadow-md);
+      border-color: rgba(62,131,188,0.15);
+    }
+    .privacy-section-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .privacy-section-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, rgba(62,131,188,0.1), rgba(252,216,50,0.1));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--secondary);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+    .privacy-section:hover .privacy-section-icon {
+      background: var(--gradient-secondary);
+      color: var(--white);
+      transform: scale(1.05) rotate(-5deg);
+    }
+    .privacy-section h2 {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: var(--dark);
+      line-height: 1.3;
+    }
+    .privacy-section p {
+      color: var(--gray-500);
+      font-size: 0.98rem;
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+    .privacy-section p:last-child {
+      margin-bottom: 0;
+    }
+    .privacy-section ul {
+      padding-left: 0;
+      margin: 14px 0;
+    }
+    .privacy-section li {
+      position: relative;
+      padding-left: 28px;
+      color: var(--gray-500);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 10px;
+    }
+    .privacy-section li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gradient-primary);
+    }
+    .privacy-section li:last-child {
+      margin-bottom: 0;
+    }
+    .privacy-section strong {
+      color: var(--dark);
+    }
+
+    /* Info callout */
+    .privacy-callout {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 18px 20px;
+      background: rgba(62,131,188,0.06);
+      border-left: 4px solid var(--secondary);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 18px 0;
+    }
+    .privacy-callout i {
+      color: var(--secondary);
+      font-size: 1.1rem;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .privacy-callout p {
+      margin: 0;
+      font-size: 0.92rem;
+      color: var(--gray-700);
+    }
+
+    /* Contact card */
+    .privacy-contact-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .privacy-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      background: rgba(252,216,50,0.06);
+      border: 1px solid rgba(252,216,50,0.15);
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
+    .privacy-contact-item:hover {
+      background: rgba(252,216,50,0.12);
+      transform: translateY(-2px);
+    }
+    .privacy-contact-item i {
+      color: var(--primary-dark);
+      font-size: 1.1rem;
+    }
+    .privacy-contact-item span {
+      color: var(--dark);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    /* ---------- Back to Home ---------- */
+    .privacy-back {
+      text-align: center;
+      padding: 40px 24px 0;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.5s ease, height 0.5s ease;
+    }
+    .btn:hover::after {
+      width: 300px;
+      height: 300px;
+    }
+    .btn-primary {
+      background: var(--gradient-primary);
+      color: var(--dark);
+      box-shadow: var(--shadow-primary);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(252,216,50,0.35);
+    }
+
+    /* ---------- Footer ---------- */
+    .footer {
+      background: var(--navy);
+      padding: 80px 0 0;
+      position: relative;
+    }
+    .footer-wave {
+      position: absolute;
+      top: -60px;
+      left: 0;
+      width: 100%;
+      line-height: 0;
+    }
+    .footer-wave svg {
+      width: 100%;
+      height: 80px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 50px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-logo {
+      height: 40px;
+      margin-bottom: 0;
+    }
+    .footer-brand p {
+      color: rgba(255,255,255,0.4);
+      font-size: 0.9rem;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+    .footer-socials {
+      display: flex;
+      gap: 10px;
+    }
+    .footer-socials a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.5);
+      transition: var(--transition);
+    }
+    .footer-socials a:hover {
+      background: var(--primary);
+      color: var(--dark);
+      transform: translateY(-3px);
+    }
+    .footer-links h4 {
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 12px;
+    }
+    .footer-links h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 30px;
+      height: 3px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.4);
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+    .footer-links a:hover {
+      color: var(--primary);
+      padding-left: 8px;
+    }
+    .footer-bottom {
+      padding: 24px 0;
+      text-align: center;
+    }
+    .footer-bottom p {
+      color: rgba(255,255,255,0.3);
+      font-size: 0.85rem;
+    }
+
+    /* ---------- Back to Top ---------- */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--gradient-primary);
+      color: var(--dark);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      box-shadow: var(--shadow-primary);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: var(--transition);
+      z-index: 999;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .back-to-top:hover {
+      transform: translateY(-4px);
+    }
+
+    /* ---------- Animations ---------- */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 768px) {
+      .nav-toggle { display: flex; }
+      .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 360px;
+        height: 100vh;
+        background: var(--dark);
+        flex-direction: column;
+        padding: 100px 30px 40px;
+        gap: 4px;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -10px 0 40px rgba(0,0,0,0.3);
+      }
+      .nav-menu.active { right: 0; }
+      .nav-link { width: 100%; padding: 14px 20px; }
+      .nav-link.cta-btn { margin-left: 0; margin-top: 16px; text-align: center; justify-content: center; }
+
+      .privacy-hero { padding: 140px 0 60px; }
+      .privacy-main { padding: 40px 16px 60px; }
+      .privacy-toc ol { grid-template-columns: 1fr; }
+      .privacy-section { padding: 28px 24px; }
+      .privacy-contact-card { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+    }
+
+    @media (max-width: 480px) {
+      .privacy-hero { padding: 130px 0 50px; }
+      .privacy-section-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .privacy-hero-badge,
+      .privacy-hero h1,
+      .privacy-hero-subtitle,
+      .privacy-hero-meta,
+      .privacy-toc,
+      .fade-in {
+        animation: none;
+        opacity: 1;
+        transform: none;
+      }
+      .privacy-hero .shape { animation: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======= NAVBAR ======= -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../../index.html" class="nav-logo">
+        <img src="../../assets/logo.png" alt="De Guzman International Visa Consultancy" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../../index.html" class="nav-link">Home</a></li>
+        <li><a href="../../index.html#about" class="nav-link">About</a></li>
+        <li><a href="../../index.html#services" class="nav-link">Services</a></li>
+        <li><a href="../../index.html#contact" class="nav-link">Contact Us</a></li>
+        <li><a href="../../index.html#contact" class="nav-link cta-btn">Get Visa Assistance</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ======= HERO BANNER ======= -->
+  <section class="privacy-hero">
+    <div class="floating-shapes" aria-hidden="true">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="privacy-hero-content">
+      <div class="privacy-hero-badge">
+        <i class="fas fa-shield-halved"></i> Your Data, Protected
       </div>
+      <h1>Privacy <span class="highlight">Policy</span></h1>
+      <p class="privacy-hero-subtitle">
+        We are committed to safeguarding your privacy and ensuring transparency in how we collect, use, and protect your personal information.
+      </p>
+    </div>
+  </section>
 
-      <!-- end navbar -->
+  <div class="privacy-wave">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,80 C360,0 1080,140 1440,60 L1440,120 L0,120 Z" fill="#f8f9fb"/>
+    </svg>
+  </div>
 
-      <!-- jumbo banner -->
-      <div class="jumbo-banner -pp">
-        <div class="main-con">
-          <h1 class="head">Privacy Policy</h1>
-        </div>
-      </div>
-      <!-- end jumbo banner -->
+  <!-- ======= MAIN CONTENT ======= -->
+  <main class="privacy-main">
 
-      <!-- PP section -->
-      <div class="main-con -static">
-        <p>De Guzman International Visa Consultancy is committed to protecting the privacy and personal data of visitors to our website. This Privacy Policy outlines how we collect, use, disclose, and safeguard personal information obtained through our contact form.</p>
-
-        <h4>1. Information We Collect</h4>
-        <p>When you use our contact form, we may collect the following personal information:</p>
-        <ol>
-          <li>Full Name</li>
-          <li>Email Address</li>
-          <li>Phone Number</li>
-          <li>Nationality</li>
-          <li>Type of Visa Inquiry(optional)</li>
-          <li>Message Content</li>
-        </ol>
-
-        <h4>2. Purpose of Collection</h4>
-        <p>We collect this information solely for the following purposes:</p>
-        <ol>
-          <li>To respond to your inquiry</li>
-          <li>To provide information and services related to visa assistance</li>
-          <li>To improve our customer service and communication</li>
-        </ol>
-        <p>We do not use the information for marketing purposes without your consent.</p>
-
-        <h4>3. Data Storage and Security</h4>
-        <p>All information submitted through our contact form is sent directly to our secured email inbox. We implement reasonable and appropriate technical and organizational measures to protect the personal data we receive from unauthorized access, disclosure, alteration, or destruction.</p>
-        <p>Please note that no method of electronic transmission over the Internet is 100% secure, and we cannot guarantee absolute security.</p>
-
-        <h4>4. Data Sharing and Disclosure</h4>
-        <p>We do not sell, rent, or trade your personal information to third parties. We may disclose your data only if required to do so by law or in response to a legal request or government inquiry.</p>
-
-        <h4>5. Your Rights</h4>
-        <p>Under applicable data protection laws (such as the Philippine Data Privacy Act of 2012), you have the right to:</p>
-        <ol>
-          <li>Access the personal data we hold about you</li>
-          <li>Request correction or deletion of your data</li>
-          <li>Withdraw your consent (if applicable)</li>
-          <li>Lodge a complaint with the appropriate data protection authority</li>
-        </ol>
-        <p>To exercise any of these rights, please contact us at [your email address].</p>
-
-        <h4>6. Retention of Data</h4>
-        <p>We retain your personal data only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, or as required by applicable laws and regulations.</p>
-
-        <h4>7. Updates to This Policy</h4>
-        <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable regulations. The updated version will be posted on this page with a revised “Last Updated” date.</p>
-
-        <h4>8. Contact Us</h4>
-        <p>If you have any questions or concerns about this Privacy Policy or how we handle your personal data, you may contact us at:</p>
-        <p><b>De Guzman International Visa Consultancy</b></p>
-        <p><b>Email:</b> <a href="mailto:shawiedginternational@gmail.com">shawiedginternational@gmail.com</a></p>
-        <p><b>Contact Number:</b> <a href="tel:+639 085 375 177">+639 085 375 177</a></p>
-      </div>
-      <!-- end PP section -->
-
-      <!-- footer -->
-      <div class="main-footer">
-        <div class="main-con -footer">
-          <div class="first">
-            <a class="footerLink" href="#"><img class="footerLogo" src="../../images/footer-logo.png" /></a>
-            <div class="footerNote">Professional visa consultation services for expatriates in the Philippines. Your trusted partner for all visa-related needs.</div>
-          </div>
-          <div class="second">
-            <div class="head">EXPLORE</div>
-            <ul class="footerList">
-              <li><a class="footerLink" href="#">Home</a></li>
-            <!--   <li><a class="footerLink" href="#">About</a></li>
-              <li><a class="footerLink" href="#">Contact Us</a></li> -->
-              <li><a class="footerLink" href="javascript:void(0)">Privacy Policy</a></li>
-            </ul>  
-          </div>
-          <div class="third">
-            <div class="head">CONTACT INFORMATION</div>
-            <ul class="footerList">
-              <li><img src="../../images/phone-white.svg" /> +639 085 375 177</li>
-              <li><img src="../../images/email-white.svg" />shawiedginternational@gmail.com</li>
-            </ul>  
-          </div>
-        </div>
-      </div>
-
-      <!-- footer note -->
-      <div class="main-con -footerNote">
-        <p>&copy; <span id="footerYear"></span> De Guzman International Visa Consultancy. All rights reserved.</p>
-      </div>
-      <!-- end footer note -->
-
-      <!-- end footer -->
-
+    <!-- Table of Contents -->
+    <div class="privacy-toc">
+      <h3><i class="fas fa-list-ul"></i> Table of Contents</h3>
+      <ol>
+        <li><a href="#information-we-collect">Information We Collect</a></li>
+        <li><a href="#how-we-use">How We Use Your Information</a></li>
+        <li><a href="#data-storage">Data Storage & Security</a></li>
+        <li><a href="#third-party">Third-Party Sharing</a></li>
+        <li><a href="#your-rights">Your Rights</a></li>
+        <li><a href="#data-retention">Data Retention</a></li>
+        <li><a href="#policy-changes">Changes to This Policy</a></li>
+        <li><a href="#contact-us">Contact Us</a></li>
+      </ol>
     </div>
 
-    <!-- end wrapper -->
+    <!-- Section 1: Information We Collect -->
+    <section id="information-we-collect" class="privacy-section fade-in">
+      <div class="privacy-section-header">
+        <div class="privacy-section-icon">
+          <i class="fas fa-clipboard-list"></i>
+        </div>
+        <h2>Information We Collect</h2>
+      </div>
+      <p>When you submit our contact form, we may collect the following personal information:</p>
+      <ul>
+        <li>Full Name</li>
+        <li>Email Address</li>
+        <li>Phone Number</li>
+        <li>Nationality</li>
+        <li>Type of Visa Inquiry (optional)</li>
+        <li>Message Content</li>
+      </ul>
+      <div class="privacy-callout">
+        <i class="fas fa-info-circle"></i>
+        <p>We only collect the minimum information necessary to respond to your inquiry and provide you with relevant visa assistance services.</p>
+      </div>
+    </section>
 
-    <!-- javascripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
-    <script src="../../js/app.js"></script>
+    <!-- Section 2: How We Use Your Information -->
+    <section id="how-we-use" class="privacy-section fade-in">
+      <div class="privacy-section-header">
+        <div class="privacy-section-icon">
+          <i class="fas fa-cogs"></i>
+        </div>
+        <h2>How We Use Your Information</h2>
+      </div>
+      <p>Your information is collected solely for the following purposes:</p>
+      <ul>
+        <li>To respond to your inquiry</li>
+        <li>To provide information and services related to visa assistance</li>
+        <li>To improve our customer service and communication</li>
+      </ul>
+      <p>We will not use your personal data for marketing or promotional purposes without your explicit consent.</p>
+    </section>
 
-  </body>
+    <!-- Section 3: Data Storage & Security -->
+    <section id="data-storage" class="privacy-section fade-in">
+      <div class="privacy-section-header">
+        <div class="privacy-section-icon">
+          <i class="fas fa-lock"></i>
+        </div>
+        <h2>Data Storage & Security</h2>
+      </div>
+      <p>All form submissions are sent directly to a secured email inbox. We implement reasonable and appropriate technical and organizational measures to protect the personal data you provide to us.</p>
+      <div class="privacy-callout">
+        <i class="fas fa-exclamation-triangle"></i>
+        <p>Please note that no method of electronic transmission over the Internet is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.</p>
+      </div>
+    </section>
 
+    <!-- Section 4: Third-Party Sharing -->
+    <section id="third-party" class="privacy-section fade-in">
+      <div class="privacy-section-header">
+        <div class="privacy-section-icon">
+          <i class="fas fa-users-slash"></i>
+        </div>
+        <h2>Third-Party Sharing</h2>
+      </div>
+      <p>We do not sell, rent, or trade your personal information to third parties. Your data may only be disclosed if required by law or to comply with legal processes.</p>
+    </section>
+
+    <!-- Section 5: Your Rights -->
+    <section id="your-rights" class="privacy-section fade-in">
+      <div class="privacy-section-header">
+        <div class="privacy-section-icon">
+          <i class="fas fa-user-shield"></i>
+        </div>
+        <h2>Your Rights</h2>
+      </div>
+      <p>In accordance with the Philippine Data Privacy Act (Republic Act No. 10173), you have the right to:</p>
+      <ul>
+        <li>Access the personal data we hold about you</li>
+        <li>Request correction or deletion of your data</li>
+        <li>Withdraw your consent at any time (if applicable)</li>
+        <li>File a complaint with the National Privacy Commission</li>
+      </ul>
+      <p>To exercise any of these rights, please contact us using the information provided below.</p>
+    </section>
+
+    <!-- Section 6: Data Retention -->
+    <section id="data-retention" class="privacy-section fade-in">
+      <div class="privacy-section-header">
+        <div class="privacy-section-icon">
+          <i class="fas fa-database"></i>
+        </div>
+        <h2>Data Retention</h2>
+      </div>
+      <p>We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, or as required by applicable laws and regulations.</p>
+    </section>
+
+    <!-- Section 7: Changes to This Policy -->
+    <section id="policy-changes" class="privacy-section fade-in">
+      <div class="privacy-section-header">
+        <div class="privacy-section-icon">
+          <i class="fas fa-file-pen"></i>
+        </div>
+        <h2>Changes to This Policy</h2>
+      </div>
+      <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated effective date. We encourage you to review this page periodically for any changes.</p>
+    </section>
+
+    <!-- Section 8: Contact Us -->
+    <section id="contact-us" class="privacy-section fade-in">
+      <div class="privacy-section-header">
+        <div class="privacy-section-icon">
+          <i class="fas fa-envelope-open-text"></i>
+        </div>
+        <h2>Contact Us</h2>
+      </div>
+      <p>If you have any questions about this Privacy Policy or how we handle your data, please reach out to us:</p>
+      <div class="privacy-contact-card">
+        <a href="mailto:shawiedginternational@gmail.com" class="privacy-contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>shawiedginternational@gmail.com</span>
+        </a>
+        <a href="tel:+639085375177" class="privacy-contact-item">
+          <i class="fas fa-phone"></i>
+          <span>+639 085 375 177</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Back to Home -->
+    <div class="privacy-back">
+      <a href="../../index.html" class="btn btn-primary">
+        <i class="fas fa-arrow-left"></i> Back to Homepage
+      </a>
+    </div>
+
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+        <path d="M0,64 C288,120 576,10 864,64 C1152,120 1296,40 1440,80 L1440,150 L0,150 Z" fill="#0a1628"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../../assets/logo.png" alt="DGIVC Logo" class="footer-logo" />
+          <p>Your trusted partner in navigating the world of international immigration and visa processing.</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/profile.php?id=61577828194156" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/shawie-de-guzman-29646615a/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../../index.html#home">Home</a></li>
+            <li><a href="../../index.html#about">About Us</a></li>
+            <li><a href="../../index.html#why-choose">Why Choose Us</a></li>
+            <li><a href="../../index.html#reviews">Testimonials</a></li>
+            <li><a href="../../index.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="../../index.html#contact">Tourist Visa</a></li>
+            <li><a href="../../index.html#contact">Work Visa</a></li>
+            <li><a href="../../index.html#contact">Student Visa</a></li>
+            <li><a href="../../index.html#contact">Permanent Residency</a></li>
+            <li><a href="../../index.html#contact">Spouse Visa</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../privacy-policy/">Privacy Policy</a></li>
+            <li><a href="../terms-of-service/">Terms of Service</a></li>
+            <li><a href="../cookie-policy/">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 De Guzman International Visa Consultancy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+      document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+    });
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -60px 0px', threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Back to top
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
 </html>
