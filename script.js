@@ -399,23 +399,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ---- CONTACT FORM ----
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const wrapper = contactForm.parentElement;
-      wrapper.innerHTML = `
-        <div class="form-success">
-          <i class="fas fa-check-circle"></i>
-          <h3>Message Sent!</h3>
-          <p>Thank you for reaching out. Our team will get back to you within 24 hours.</p>
-        </div>
-      `;
-      wrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    });
-  }
-
   // ---- SMOOTH ANCHOR SCROLL ----
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {

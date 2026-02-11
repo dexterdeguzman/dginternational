@@ -1808,24 +1808,3 @@ ul { list-style: none; }
 .privacy-content li {
   margin-bottom: 8px;
 }
-
-/* ==========================================
-   FORM SUCCESS STATE
-   ========================================== */
-.form-success {
-  text-align: center;
-  padding: 60px 20px;
-}
-.form-success i {
-  font-size: 4rem;
-  color: var(--success);
-  margin-bottom: 20px;
-}
-.form-success h3 {
-  color: var(--white);
-  font-size: 1.5rem;
-  margin-bottom: 12px;
-}
-.form-success p {
-  color: rgba(255,255,255,0.6);
-}
