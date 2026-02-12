@@ -161,7 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const sizeCards = () => {
       const perView = getCardsPerView();
       const sliderWidth = slider.offsetWidth;
-      const cardWidth = (sliderWidth - gap * perView) / perView;
+      const rawCardWidth = (sliderWidth - gap * perView) / perView;
+      const cardWidth = Math.floor(rawCardWidth);
       cards.forEach(card => {
         card.style.minWidth = cardWidth + 'px';
         card.style.maxWidth = cardWidth + 'px';
@@ -182,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
       currentIndex = Math.max(0, Math.min(index, total - 1));
 
       const cardEl = cards[0];
-      const cardWidth = cardEl.offsetWidth + gap;
+      const cardWidth = cardEl.getBoundingClientRect().width + gap;
       track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
       updateControls();
     };
