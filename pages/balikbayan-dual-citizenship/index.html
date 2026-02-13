@@ -1,0 +1,2092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balikbayan & Dual Citizenship | De Guzman International Visa Consultancy</title>
+  <meta name="description" content="Balikbayan privilege verification, dual citizenship applications under RA 9225, and re-acquisition of Filipino citizenship. Expert assistance from De Guzman International." />
+  <link rel="icon" type="image/png" href="../../assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    /* ============================
+       CSS VARIABLES / DESIGN SYSTEM
+       ============================ */
+    :root {
+      --primary: #FCD832;
+      --primary-dark: #e0bf00;
+      --secondary: #3E83BC;
+      --secondary-dark: #2a6699;
+      --secondary-light: #5ba0d9;
+      --dark: #0f1b2d;
+      --dark-2: #162236;
+      --dark-3: #1a2a42;
+      --navy: #0a1628;
+      --white: #ffffff;
+      --off-white: #f8f9fb;
+      --gray-100: #eef1f5;
+      --gray-200: #dce1e8;
+      --gray-300: #b0b8c5;
+      --gray-500: #6b7a8d;
+      --gray-700: #3a4553;
+      --gradient-primary: linear-gradient(135deg, var(--primary) 0%, #f0c800 100%);
+      --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+      --gradient-dark: linear-gradient(180deg, var(--dark) 0%, var(--navy) 100%);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 8px 30px rgba(0,0,0,0.12);
+      --shadow-lg: 0 20px 60px rgba(0,0,0,0.15);
+      --shadow-primary: 0 8px 30px rgba(252,216,50,0.25);
+      --shadow-secondary: 0 8px 30px rgba(62,131,188,0.25);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 30px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ============================
+       RESET & BASE
+       ============================ */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      color: var(--gray-700);
+      background: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .highlight {
+      color: var(--primary);
+    }
+
+    /* ============================
+       ANIMATIONS
+       ============================ */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-left {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    .fade-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .fade-right {
+      opacity: 0;
+      transform: translateX(40px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    .fade-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up, .fade-left, .fade-right {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* ============================
+       SECTION HEADERS
+       ============================ */
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .section-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(252,216,50,0.15), rgba(252,216,50,0.05));
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(252,216,50,0.3);
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 900;
+      color: var(--dark);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .section-line {
+      width: 60px;
+      height: 4px;
+      background: var(--gradient-primary);
+      border-radius: 2px;
+      margin: 0 auto 20px;
+    }
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--gray-500);
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* ============================
+       NAVBAR
+       ============================ */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(15, 27, 45, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: var(--transition);
+    }
+    .navbar.scrolled {
+      background: rgba(10, 22, 40, 0.98);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 75px;
+    }
+    .nav-logo img {
+      height: 48px;
+      width: auto;
+      transition: var(--transition);
+    }
+    .nav-logo:hover img {
+      transform: scale(1.05);
+    }
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 8px;
+    }
+    .nav-link {
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      position: relative;
+    }
+    .nav-link:hover {
+      color: var(--primary);
+      background: rgba(252,216,50,0.08);
+    }
+    .nav-link.cta-btn {
+      background: var(--gradient-primary);
+      color: var(--dark) !important;
+      font-weight: 700;
+      padding: 10px 24px;
+      border-radius: var(--radius-xl);
+      margin-left: 8px;
+      box-shadow: var(--shadow-primary);
+    }
+    .nav-link.cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 35px rgba(252,216,50,0.35);
+      background: linear-gradient(135deg, #ffe066 0%, var(--primary) 100%);
+    }
+
+    /* Mobile Toggle */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 26px;
+      height: 2.5px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .nav-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .nav-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .nav-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: flex;
+      }
+      .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 350px;
+        height: 100vh;
+        background: var(--dark);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 100px 32px 40px;
+        gap: 4px;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -10px 0 40px rgba(0,0,0,0.5);
+      }
+      .nav-menu.active {
+        right: 0;
+      }
+      .nav-link {
+        width: 100%;
+        padding: 14px 16px;
+        font-size: 1rem;
+      }
+      .nav-link.cta-btn {
+        margin-left: 0;
+        margin-top: 12px;
+        text-align: center;
+        display: block;
+      }
+    }
+
+    /* ============================
+       HERO SECTION
+       ============================ */
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1524850011238-e3d235c7d4c9?w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,22,40,0.92) 0%, rgba(15,27,45,0.85) 40%, rgba(62,131,188,0.3) 100%);
+    }
+    .hero-pattern {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(252,216,50,0.07) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* Animated floating shapes */
+    .hero-shapes {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .hero-shape {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.06;
+      animation: heroFloat 20s ease-in-out infinite;
+    }
+    .hero-shape-1 {
+      width: 400px;
+      height: 400px;
+      background: var(--primary);
+      top: -100px;
+      right: -100px;
+      animation-delay: 0s;
+    }
+    .hero-shape-2 {
+      width: 250px;
+      height: 250px;
+      background: var(--secondary);
+      bottom: -50px;
+      left: -50px;
+      animation-delay: -5s;
+      animation-duration: 25s;
+    }
+    .hero-shape-3 {
+      width: 150px;
+      height: 150px;
+      background: var(--primary);
+      top: 50%;
+      left: 30%;
+      animation-delay: -10s;
+      animation-duration: 18s;
+    }
+
+    @keyframes heroFloat {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(30px, -30px) scale(1.05); }
+      50% { transform: translate(-20px, 20px) scale(0.95); }
+      75% { transform: translate(15px, 15px) scale(1.02); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 140px 0 80px;
+      max-width: 750px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(252,216,50,0.12);
+      border: 1px solid rgba(252,216,50,0.3);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 10px 22px;
+      border-radius: var(--radius-xl);
+      margin-bottom: 24px;
+      backdrop-filter: blur(10px);
+    }
+    .hero-badge i {
+      font-size: 1rem;
+    }
+    .hero-title {
+      font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+    .hero-title .highlight {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.8;
+      margin-bottom: 36px;
+      max-width: 600px;
+      font-weight: 300;
+    }
+    .hero-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .hero-breadcrumb a {
+      color: rgba(255,255,255,0.7);
+      transition: var(--transition);
+    }
+    .hero-breadcrumb a:hover {
+      color: var(--primary);
+    }
+    .hero-breadcrumb .separator {
+      color: rgba(255,255,255,0.3);
+    }
+    .hero-breadcrumb .current {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Hero scroll indicator */
+    .hero-scroll {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+    }
+    .hero-scroll a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .hero-scroll span {
+      display: block;
+      width: 24px;
+      height: 40px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 12px;
+      position: relative;
+    }
+    .hero-scroll span::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 2px;
+      left: 50%;
+      top: 6px;
+      transform: translateX(-50%);
+      animation: scrollBounce 2s ease-in-out infinite;
+    }
+    @keyframes scrollBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+      50% { transform: translateX(-50%) translateY(12px); opacity: 0.3; }
+    }
+
+    /* ============================
+       SERVICE OVERVIEW CARDS
+       ============================ */
+    .overview {
+      padding: 100px 0;
+      background: var(--off-white);
+      position: relative;
+    }
+    .overview::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-primary);
+    }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .overview-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--gray-100);
+    }
+    .overview-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-secondary);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+    .overview-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: transparent;
+    }
+    .overview-card:hover::before {
+      transform: scaleX(1);
+    }
+    .overview-card-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(62,131,188,0.1), rgba(62,131,188,0.05));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      transition: var(--transition);
+    }
+    .overview-card-icon i {
+      font-size: 1.8rem;
+      color: var(--secondary);
+      transition: var(--transition);
+    }
+    .overview-card:hover .overview-card-icon {
+      background: var(--gradient-secondary);
+      transform: scale(1.1);
+    }
+    .overview-card:hover .overview-card-icon i {
+      color: var(--white);
+    }
+    .overview-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 14px;
+    }
+    .overview-card p {
+      font-size: 0.95rem;
+      color: var(--gray-500);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    /* ============================
+       REQUIREMENTS SECTION
+       ============================ */
+    .requirements {
+      padding: 100px 0;
+      background: var(--white);
+    }
+    .requirements-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+    .requirements-card {
+      background: var(--off-white);
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+      border: 1px solid var(--gray-100);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .requirements-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient-primary);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+      transform-origin: left;
+    }
+    .requirements-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(252,216,50,0.2);
+    }
+    .requirements-card:hover::after {
+      transform: scaleX(1);
+    }
+    .requirements-card-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .requirements-card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-md);
+      background: var(--gradient-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .requirements-card-icon i {
+      font-size: 1.3rem;
+      color: var(--dark);
+    }
+    .requirements-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+    .requirements-list {
+      list-style: none;
+    }
+    .requirements-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--gray-100);
+      font-size: 0.95rem;
+      color: var(--gray-700);
+      line-height: 1.6;
+    }
+    .requirements-list li:last-child {
+      border-bottom: none;
+    }
+    .requirements-list li::before {
+      content: '\f00c';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      color: var(--secondary);
+      font-size: 0.8rem;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      .requirements-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ============================
+       PROCESS TIMELINE
+       ============================ */
+    .process {
+      padding: 100px 0;
+      background: var(--dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .process::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(252,216,50,0.04) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+    .process .section-tag {
+      background: rgba(252,216,50,0.1);
+      border-color: rgba(252,216,50,0.2);
+    }
+    .process .section-title {
+      color: var(--white);
+    }
+    .process .section-subtitle {
+      color: rgba(255,255,255,0.6);
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 35px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--primary), var(--secondary));
+      border-radius: 2px;
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 90px;
+      padding-bottom: 50px;
+    }
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: 20px;
+      top: 4px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--dark-2);
+      border: 3px solid var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      transition: var(--transition);
+    }
+    .timeline-dot i {
+      font-size: 0.75rem;
+      color: var(--primary);
+      transition: var(--transition);
+    }
+    .timeline-item:hover .timeline-dot {
+      background: var(--primary);
+      box-shadow: 0 0 20px rgba(252,216,50,0.4);
+      transform: scale(1.15);
+    }
+    .timeline-item:hover .timeline-dot i {
+      color: var(--dark);
+    }
+    .timeline-step {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .timeline-content {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-md);
+      padding: 28px 32px;
+      transition: var(--transition);
+    }
+    .timeline-item:hover .timeline-content {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(252,216,50,0.2);
+      transform: translateX(6px);
+    }
+    .timeline-content h4 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .timeline-content p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 480px) {
+      .timeline::before {
+        left: 18px;
+      }
+      .timeline-item {
+        padding-left: 60px;
+      }
+      .timeline-dot {
+        left: 4px;
+        width: 30px;
+        height: 30px;
+      }
+      .timeline-content {
+        padding: 20px 22px;
+      }
+    }
+
+    /* ============================
+       KEY INFO CARDS
+       ============================ */
+    .key-info {
+      padding: 100px 0;
+      background: var(--off-white);
+      position: relative;
+    }
+    .key-info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .key-info-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      text-align: center;
+      border: 1px solid var(--gray-100);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .key-info-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: var(--gradient-primary);
+      border-radius: 0 0 4px 4px;
+    }
+    .key-info-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(252,216,50,0.2);
+    }
+    .key-info-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(252,216,50,0.12), rgba(252,216,50,0.04));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      transition: var(--transition);
+    }
+    .key-info-icon i {
+      font-size: 1.5rem;
+      color: var(--primary-dark);
+    }
+    .key-info-card:hover .key-info-icon {
+      background: var(--gradient-primary);
+      transform: scale(1.1) rotate(-5deg);
+    }
+    .key-info-card:hover .key-info-icon i {
+      color: var(--dark);
+    }
+    .key-info-card h3 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+    .key-info-value {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--dark);
+      line-height: 1.2;
+    }
+
+    @media (max-width: 768px) {
+      .key-info-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    /* ============================
+       FAQ SECTION
+       ============================ */
+    .faq {
+      padding: 100px 0;
+      background: var(--white);
+    }
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius-md);
+      margin-bottom: 16px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .faq-item:hover {
+      border-color: rgba(62,131,188,0.2);
+    }
+    .faq-item.active {
+      border-color: var(--secondary);
+      box-shadow: var(--shadow-secondary);
+    }
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 28px;
+      cursor: pointer;
+      background: var(--off-white);
+      transition: var(--transition);
+      width: 100%;
+      border: none;
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--dark);
+      text-align: left;
+    }
+    .faq-item.active .faq-question {
+      background: var(--secondary);
+      color: var(--white);
+    }
+    .faq-question:hover {
+      background: var(--gray-100);
+    }
+    .faq-item.active .faq-question:hover {
+      background: var(--secondary-dark);
+    }
+    .faq-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(62,131,188,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+    .faq-item.active .faq-icon {
+      background: rgba(255,255,255,0.2);
+      transform: rotate(180deg);
+    }
+    .faq-icon i {
+      font-size: 0.8rem;
+      color: var(--secondary);
+      transition: var(--transition);
+    }
+    .faq-item.active .faq-icon i {
+      color: var(--white);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    .faq-answer-inner {
+      padding: 0 28px 24px;
+      font-size: 0.95rem;
+      color: var(--gray-500);
+      line-height: 1.8;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+    }
+
+    /* ============================
+       CTA BANNER
+       ============================ */
+    .cta-banner {
+      padding: 100px 0;
+      background: var(--gradient-dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(252,216,50,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .cta-banner::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -5%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(62,131,188,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .cta-content {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    .cta-content h2 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .cta-content p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.65);
+      max-width: 550px;
+      margin: 0 auto 36px;
+      line-height: 1.8;
+    }
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border-radius: var(--radius-xl);
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: var(--gradient-primary);
+      color: var(--dark);
+      box-shadow: var(--shadow-primary);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(252,216,50,0.35);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-3px);
+    }
+    .btn-secondary {
+      background: var(--gradient-secondary);
+      color: var(--white);
+      box-shadow: var(--shadow-secondary);
+    }
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(62,131,188,0.35);
+    }
+    .btn-block {
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* ============================
+       CONTACT SECTION
+       ============================ */
+    .contact {
+      padding: 100px 0;
+      background: var(--off-white);
+      position: relative;
+    }
+    .contact-shape-top {
+      position: absolute;
+      top: -1px;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+      line-height: 0;
+    }
+    .contact-shape-top svg {
+      width: 100%;
+      height: 80px;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 50px;
+      align-items: start;
+    }
+    .contact-info-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .contact-info-card:last-of-type {
+      border-bottom: none;
+    }
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, rgba(62,131,188,0.1), rgba(62,131,188,0.05));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-icon i {
+      font-size: 1.1rem;
+      color: var(--secondary);
+    }
+    .contact-info-card h5 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--dark);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .contact-info-card p {
+      font-size: 0.95rem;
+      color: var(--gray-500);
+    }
+
+    .contact-highlights {
+      margin-top: 32px;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      border: 1px solid var(--gray-100);
+    }
+    .contact-highlights h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+    .contact-highlights ul {
+      list-style: none;
+    }
+    .contact-highlights ul li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 0;
+      font-size: 0.92rem;
+      color: var(--gray-700);
+    }
+    .contact-highlights ul li::before {
+      content: '\f00c';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      color: var(--secondary);
+      font-size: 0.75rem;
+      width: 22px;
+      height: 22px;
+      background: rgba(62,131,188,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* Form */
+    .contact-form-wrapper {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      border: 1px solid var(--gray-100);
+      box-shadow: var(--shadow-sm);
+    }
+    .contact-form .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px 18px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.95rem;
+      color: var(--dark);
+      background: var(--off-white);
+      border: 2px solid var(--gray-100);
+      border-radius: var(--radius-sm);
+      outline: none;
+      transition: var(--transition);
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--secondary);
+      background: var(--white);
+      box-shadow: 0 0 0 4px rgba(62,131,188,0.1);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .form-group select {
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%236b7a8d' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-form .form-row {
+        grid-template-columns: 1fr;
+      }
+      .contact-form-wrapper {
+        padding: 28px 24px;
+      }
+    }
+
+    /* ============================
+       FOOTER
+       ============================ */
+    .footer {
+      background: var(--navy);
+      padding: 80px 0 0;
+      position: relative;
+    }
+    .footer-wave {
+      position: absolute;
+      top: -80px;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+      line-height: 0;
+    }
+    .footer-wave svg {
+      width: 100%;
+      height: 80px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 50px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-brand p {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .footer-logo {
+      height: 44px;
+      margin-bottom: 16px;
+    }
+    .footer-socials {
+      display: flex;
+      gap: 12px;
+    }
+    .footer-socials a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+    .footer-socials a:hover {
+      background: var(--primary);
+      color: var(--dark);
+      transform: translateY(-3px);
+    }
+    .footer-links h4 {
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 12px;
+    }
+    .footer-links h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 30px;
+      height: 3px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+    .footer-links ul {
+      list-style: none;
+    }
+    .footer-links ul li {
+      margin-bottom: 10px;
+    }
+    .footer-links ul li a {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.9rem;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .footer-links ul li a:hover {
+      color: var(--primary);
+      transform: translateX(4px);
+    }
+    .footer-bottom {
+      text-align: center;
+      padding: 24px 0;
+    }
+    .footer-bottom p {
+      color: rgba(255,255,255,0.35);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+    }
+    @media (max-width: 480px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ============================
+       BACK TO TOP
+       ============================ */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--gradient-primary);
+      color: var(--dark);
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-primary);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: var(--transition);
+      z-index: 999;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .back-to-top:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 35px rgba(252,216,50,0.4);
+    }
+
+    /* ============================
+       UTILITY / GLOBAL
+       ============================ */
+    ::selection {
+      background: rgba(252,216,50,0.3);
+      color: var(--dark);
+    }
+
+    /* Smooth section transitions */
+    section {
+      position: relative;
+    }
+
+    /* Responsive Hero */
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 75vh;
+      }
+      .hero-content {
+        padding: 120px 0 60px;
+      }
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      .btn {
+        width: 100%;
+        justify-content: center;
+        max-width: 320px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-content {
+        padding: 110px 0 50px;
+      }
+      .hero-badge {
+        font-size: 0.75rem;
+        padding: 8px 16px;
+      }
+      .hero-breadcrumb {
+        font-size: 0.8rem;
+        flex-wrap: wrap;
+      }
+      .overview {
+        padding: 70px 0;
+      }
+      .requirements {
+        padding: 70px 0;
+      }
+      .process {
+        padding: 70px 0;
+      }
+      .key-info {
+        padding: 70px 0;
+      }
+      .faq {
+        padding: 70px 0;
+      }
+      .cta-banner {
+        padding: 70px 0;
+      }
+      .contact {
+        padding: 70px 0;
+      }
+      .section-header {
+        margin-bottom: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======= NAVBAR ======= -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../../index.html" class="nav-logo">
+        <img src="../../assets/logo.png" alt="De Guzman International Visa Consultancy" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../../index.html" class="nav-link">Home</a></li>
+        <li><a href="../../index.html#about" class="nav-link">About</a></li>
+        <li><a href="../../index.html#services" class="nav-link">Services</a></li>
+        <li><a href="../../index.html#contact" class="nav-link">Contact Us</a></li>
+        <li><a href="../../index.html#contact" class="nav-link cta-btn">Get Visa Assistance</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ======= HERO SECTION ======= -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-pattern"></div>
+
+    <div class="hero-shapes" aria-hidden="true">
+      <div class="hero-shape hero-shape-1"></div>
+      <div class="hero-shape hero-shape-2"></div>
+      <div class="hero-shape hero-shape-3"></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-badge fade-up">
+        <i class="fas fa-id-card"></i> Balikbayan & Dual Citizenship
+      </div>
+      <h1 class="hero-title fade-up delay-1">
+        Balikbayan & Dual<br /><span class="highlight">Citizenship</span>
+      </h1>
+      <p class="hero-subtitle fade-up delay-2">
+        Balikbayan privilege verification, dual citizenship applications under RA 9225, and re-acquisition of Filipino citizenship.
+      </p>
+      <div class="hero-breadcrumb fade-up delay-3">
+        <a href="../../index.html">Home</a>
+        <span class="separator"><i class="fas fa-chevron-right"></i></span>
+        <a href="../../index.html#services">Services</a>
+        <span class="separator"><i class="fas fa-chevron-right"></i></span>
+        <span class="current">Balikbayan & Dual Citizenship</span>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <a href="#overview">
+        <span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ======= SERVICE OVERVIEW ======= -->
+  <section class="overview" id="overview">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Our Services</span>
+        <h2 class="section-title">Comprehensive <span class="highlight">Citizenship Solutions</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">From Balikbayan privileges to full dual citizenship, we provide expert guidance every step of the way.</p>
+      </div>
+
+      <div class="overview-grid">
+        <div class="overview-card fade-up delay-1">
+          <div class="overview-card-icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <h3>Balikbayan Privilege</h3>
+          <p>Former Filipino citizens and their families can enjoy visa-free entry for up to one year. We verify eligibility and assist with documentation for hassle-free travel.</p>
+        </div>
+
+        <div class="overview-card fade-up delay-2">
+          <div class="overview-card-icon">
+            <i class="fas fa-passport"></i>
+          </div>
+          <h3>Dual Citizenship (RA 9225)</h3>
+          <p>Republic Act 9225 allows natural-born Filipinos who became foreign citizens to re-acquire Filipino citizenship while retaining their foreign nationality.</p>
+        </div>
+
+        <div class="overview-card fade-up delay-3">
+          <div class="overview-card-icon">
+            <i class="fas fa-flag"></i>
+          </div>
+          <h3>Re-acquisition of Citizenship</h3>
+          <p>Complete assistance with the oath-taking process, petition filing, and documentation for re-acquiring Filipino citizenship through the proper legal channels.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= REQUIREMENTS ======= -->
+  <section class="requirements" id="requirements">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">What You Need</span>
+        <h2 class="section-title">Required <span class="highlight">Documents</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Prepare these documents before your consultation. We'll guide you through every detail.</p>
+      </div>
+
+      <div class="requirements-grid">
+        <div class="requirements-card fade-up delay-1">
+          <div class="requirements-card-header">
+            <div class="requirements-card-icon">
+              <i class="fas fa-plane-arrival"></i>
+            </div>
+            <h3>For Balikbayan Privilege</h3>
+          </div>
+          <ul class="requirements-list">
+            <li>Valid foreign passport</li>
+            <li>Proof of former Filipino citizenship (old Philippine passport, birth certificate)</li>
+            <li>Proof of relationship to Filipino citizen (if applicable)</li>
+            <li>Completed arrival/departure card</li>
+          </ul>
+        </div>
+
+        <div class="requirements-card fade-up delay-2">
+          <div class="requirements-card-header">
+            <div class="requirements-card-icon">
+              <i class="fas fa-gavel"></i>
+            </div>
+            <h3>For Dual Citizenship (RA 9225)</h3>
+          </div>
+          <ul class="requirements-list">
+            <li>Philippine birth certificate (PSA copy)</li>
+            <li>Foreign naturalization certificate</li>
+            <li>Valid foreign passport</li>
+            <li>Passport-size photos (white background)</li>
+            <li>Oath of allegiance affidavit</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= PROCESS TIMELINE ======= -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">How It Works</span>
+        <h2 class="section-title">Our <span class="highlight">Process</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">A clear, step-by-step path from eligibility verification to certificate issuance.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item fade-up delay-1">
+          <div class="timeline-dot"><i class="fas fa-user-check"></i></div>
+          <div class="timeline-content">
+            <span class="timeline-step">Step 1</span>
+            <h4>Eligibility Verification</h4>
+            <p>We confirm your eligibility for Balikbayan privilege or dual citizenship.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-up delay-2">
+          <div class="timeline-dot"><i class="fas fa-folder-open"></i></div>
+          <div class="timeline-content">
+            <span class="timeline-step">Step 2</span>
+            <h4>Document Preparation</h4>
+            <p>We guide you in obtaining and authenticating all required documents.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-up delay-3">
+          <div class="timeline-dot"><i class="fas fa-file-export"></i></div>
+          <div class="timeline-content">
+            <span class="timeline-step">Step 3</span>
+            <h4>Petition Filing</h4>
+            <p>We file your petition with the Bureau of Immigration or Philippine Consulate.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-up delay-4">
+          <div class="timeline-dot"><i class="fas fa-hand-fist"></i></div>
+          <div class="timeline-content">
+            <span class="timeline-step">Step 4</span>
+            <h4>Oath of Allegiance</h4>
+            <p>We coordinate your oath-taking schedule and accompany you to the ceremony.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-up delay-5">
+          <div class="timeline-dot"><i class="fas fa-award"></i></div>
+          <div class="timeline-content">
+            <span class="timeline-step">Step 5</span>
+            <h4>Certificate Issuance</h4>
+            <p>Receive your Certificate of Re-acquisition and enjoy dual citizen benefits.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= KEY INFO ======= -->
+  <section class="key-info" id="key-info">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Quick Facts</span>
+        <h2 class="section-title">Key <span class="highlight">Information</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="key-info-grid">
+        <div class="key-info-card fade-up delay-1">
+          <div class="key-info-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>RA 9225 Processing</h3>
+          <div class="key-info-value">2-4 Months</div>
+        </div>
+
+        <div class="key-info-card fade-up delay-2">
+          <div class="key-info-icon">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+          <h3>Balikbayan Stay</h3>
+          <div class="key-info-value">Up to 1 Year</div>
+        </div>
+
+        <div class="key-info-card fade-up delay-3">
+          <div class="key-info-icon">
+            <i class="fas fa-hand-holding-dollar"></i>
+          </div>
+          <h3>Consultation</h3>
+          <div class="key-info-value">Free</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FAQ ======= -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Find answers to common questions about Balikbayan privilege and dual citizenship.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item fade-up delay-1">
+          <button class="faq-question" aria-expanded="false">
+            Who qualifies as a Balikbayan?
+            <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Former Filipino citizens who have been naturalized abroad, as well as their spouse and children, qualify for Balikbayan privilege. This grants visa-free entry to the Philippines for up to one year.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up delay-2">
+          <button class="faq-question" aria-expanded="false">
+            Can I own property in the Philippines with dual citizenship?
+            <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes! One of the key benefits of re-acquiring Filipino citizenship under RA 9225 is the ability to own land and property in the Philippines, which is restricted for foreign nationals.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up delay-3">
+          <button class="faq-question" aria-expanded="false">
+            Do I need to go to the Philippines for the oath-taking?
+            <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Not necessarily. You can take the oath at a Philippine Consulate or Embassy in your country of residence. However, if you're already in the Philippines, we can arrange the oath-taking at the Bureau of Immigration.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up delay-4">
+          <button class="faq-question" aria-expanded="false">
+            Will I lose my foreign citizenship?
+            <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              No. RA 9225 specifically allows natural-born Filipinos to retain their foreign citizenship while re-acquiring Filipino citizenship. You will hold dual nationality.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= CTA BANNER ======= -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-content fade-up">
+        <h2>Ready to Reclaim Your Filipino Roots?</h2>
+        <p>Whether it's Balikbayan privilege or dual citizenship, we make the process simple.</p>
+        <div class="cta-buttons">
+          <a href="#contact-section" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i> Get Free Consultation
+          </a>
+          <a href="tel:+639085375177" class="btn btn-outline">
+            <i class="fas fa-phone"></i> Call Us Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= CONTACT SECTION ======= -->
+  <section class="contact" id="contact-section">
+    <div class="contact-shape-top">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,40 C480,120 960,0 1440,80 L1440,0 L0,0 Z" fill="#0a1628"/>
+      </svg>
+    </div>
+
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact <span class="highlight">Us</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">
+          Ready to take the next step? Reach out to us for a free initial consultation.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info fade-left">
+          <div class="contact-info-card">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h5>Location</h5>
+              <p>Philippines, serving nationwide</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <h5>Phone</h5>
+              <p>+639 085 375 177</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h5>Email us</h5>
+              <p>shawiedginternational@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h5>Business hours</h5>
+              <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+            </div>
+          </div>
+
+          <div class="contact-highlights">
+            <h4>Why Choose Us?</h4>
+            <ul>
+              <li>8+ years of visa industry experience</li>
+              <li>Personalized service for each client</li>
+              <li>Quick response and processing</li>
+              <li>Competitive and transparent pricing</li>
+              <li>Support for all visa types and nationalities</li>
+              <li>Free Visa Consultation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper fade-right">
+          <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="1020194d-bb82-4e9c-987f-bd45b27df8db" />
+            <input type="hidden" name="subject" value="Balikbayan & Dual Citizenship Inquiry from DGI Website" />
+            <input type="hidden" name="from_name" value="De Guzman International Visa Consultancy Website" />
+            <input type="hidden" name="redirect" value="https://www.deguzmaninternational.com/pages/thank-you/" />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="John" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Doe" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+63 917 123 4567" required />
+            </div>
+            <div class="form-group">
+              <label for="nationality">Nationality *</label>
+              <input type="text" id="nationality" name="nationality" placeholder="Filipino" required />
+            </div>
+            <div class="form-group">
+              <label for="serviceType">Service Type</label>
+              <select id="serviceType" name="serviceType">
+                <option value="" disabled selected>Select service</option>
+                <option value="balikbayan">Balikbayan Privilege</option>
+                <option value="dual-citizenship">Dual Citizenship (RA 9225)</option>
+                <option value="reacquisition">Re-acquisition of Citizenship</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your citizenship or Balikbayan needs..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+        <path d="M0,64 C288,120 576,10 864,64 C1152,120 1296,40 1440,80 L1440,150 L0,150 Z" fill="#0a1628"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../../assets/logo.png" alt="DGIVC Logo" class="footer-logo" />
+          <p>Your trusted partner in navigating the world of international immigration and visa processing.</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/profile.php?id=61577828194156" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/shawie-de-guzman-29646615a/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#about">About Us</a></li>
+            <li><a href="../../index.html#services">Services</a></li>
+            <li><a href="../../index.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="../short-term-visas/">Short Term Visas</a></li>
+            <li><a href="../work-visas/">Work Visas</a></li>
+            <li><a href="../permanent-visas/">Permanent Visas</a></li>
+            <li><a href="../visa-extensions/">Visa Extensions</a></li>
+            <li><a href="../inbound-visa-processing/">Inbound Visa Processing</a></li>
+            <li><a href="./">Balikbayan & Dual Citizenship</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../privacy-policy/">Privacy Policy</a></li>
+            <li><a href="../terms-of-service/">Terms of Service</a></li>
+            <li><a href="../cookie-policy/">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 De Guzman International Visa Consultancy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    /* ============================
+       NAVBAR
+       ============================ */
+    const navbar = document.getElementById('navbar');
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    // Scroll effect
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Mobile toggle
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Close mobile menu on outside click
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+
+    /* ============================
+       SCROLL ANIMATIONS
+       ============================ */
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-up, .fade-left, .fade-right').forEach(el => {
+      observer.observe(el);
+    });
+
+    /* ============================
+       FAQ ACCORDION
+       ============================ */
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isActive = item.classList.contains('active');
+
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(faq => {
+          faq.classList.remove('active');
+          faq.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+
+        // Toggle clicked
+        if (!isActive) {
+          item.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    /* ============================
+       BACK TO TOP
+       ============================ */
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 500);
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /* ============================
+       LUCIDE ICONS
+       ============================ */
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

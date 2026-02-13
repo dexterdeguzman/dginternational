@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inbound Visa Processing | De Guzman International Visa Consultancy</title>
+  <meta name="description" content="End-to-end inbound visa processing for foreign nationals relocating to the Philippines. Entry visas, visa conversion, and Bureau of Immigration compliance." />
+  <link rel="icon" type="image/png" href="../../assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    /* ========================================
+       CSS RESET & VARIABLES
+    ======================================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #FCD832; --primary-dark: #e0bf00;
+      --secondary: #3E83BC; --secondary-dark: #2a6699; --secondary-light: #5ba0d9;
+      --dark: #0f1b2d; --dark-2: #162236; --dark-3: #1a2a42; --navy: #0a1628;
+      --white: #ffffff; --off-white: #f8f9fb;
+      --gray-100: #eef1f5; --gray-200: #dce1e8; --gray-300: #b0b8c5; --gray-500: #6b7a8d; --gray-700: #3a4553;
+      --gradient-primary: linear-gradient(135deg, var(--primary) 0%, #f0c800 100%);
+      --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+      --gradient-dark: linear-gradient(180deg, var(--dark) 0%, var(--navy) 100%);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 8px 30px rgba(0,0,0,0.12);
+      --shadow-lg: 0 20px 60px rgba(0,0,0,0.15);
+      --shadow-primary: 0 8px 30px rgba(252,216,50,0.25);
+      --shadow-secondary: 0 8px 30px rgba(62,131,188,0.25);
+      --radius-sm: 8px; --radius-md: 12px; --radius-lg: 20px; --radius-xl: 30px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Lato', sans-serif;
+      color: var(--gray-700);
+      background: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* ========================================
+       ANIMATIONS
+    ======================================== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeLeft {
+      from { opacity: 0; transform: translateX(-40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes fadeRight {
+      from { opacity: 0; transform: translateX(40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.85); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    @keyframes slideDown {
+      from { opacity: 0; max-height: 0; padding-top: 0; padding-bottom: 0; }
+      to { opacity: 1; max-height: 500px; padding-top: 20px; padding-bottom: 20px; }
+    }
+    @keyframes borderGlow {
+      0%, 100% { box-shadow: 0 0 5px rgba(252,216,50,0.2); }
+      50% { box-shadow: 0 0 20px rgba(252,216,50,0.4); }
+    }
+    @keyframes drawLine {
+      from { height: 0; }
+      to { height: 100%; }
+    }
+
+    .fade-up, .fade-left, .fade-right, .scale-in {
+      opacity: 0;
+    }
+    .fade-up.visible { animation: fadeUp 0.8s var(--transition) forwards; }
+    .fade-left.visible { animation: fadeLeft 0.8s var(--transition) forwards; }
+    .fade-right.visible { animation: fadeRight 0.8s var(--transition) forwards; }
+    .scale-in.visible { animation: scaleIn 0.8s var(--transition) forwards; }
+
+    .delay-1 { animation-delay: 0.1s !important; }
+    .delay-2 { animation-delay: 0.2s !important; }
+    .delay-3 { animation-delay: 0.3s !important; }
+    .delay-4 { animation-delay: 0.4s !important; }
+    .delay-5 { animation-delay: 0.5s !important; }
+
+    /* ========================================
+       NAVBAR
+    ======================================== */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 16px 0;
+      background: transparent;
+      transition: all var(--transition);
+    }
+    .navbar.scrolled {
+      background: rgba(15, 27, 45, 0.95);
+      backdrop-filter: blur(20px);
+      padding: 10px 0;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+    }
+    .nav-container {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo img { height: 48px; width: auto; transition: var(--transition); }
+    .navbar.scrolled .nav-logo img { height: 40px; }
+    .nav-menu {
+      display: flex; align-items: center; gap: 8px;
+    }
+    .nav-link {
+      color: var(--white); padding: 10px 16px;
+      font-weight: 500; font-size: 0.95rem;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      position: relative;
+    }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: 4px; left: 16px; right: 16px;
+      height: 2px; background: var(--primary); transform: scaleX(0);
+      transition: transform var(--transition); transform-origin: right;
+    }
+    .nav-link:hover::after { transform: scaleX(1); transform-origin: left; }
+    .nav-link:hover { color: var(--primary); }
+    .nav-link.cta-btn {
+      background: var(--gradient-primary); color: var(--dark) !important;
+      font-weight: 700; border-radius: var(--radius-xl);
+      padding: 10px 24px;
+    }
+    .nav-link.cta-btn::after { display: none; }
+    .nav-link.cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-primary);
+    }
+    .nav-toggle {
+      display: none; background: none; border: none; cursor: pointer;
+      flex-direction: column; gap: 5px; padding: 4px;
+    }
+    .nav-toggle span {
+      width: 28px; height: 3px; background: var(--white);
+      border-radius: 3px; transition: var(--transition);
+    }
+    .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+
+    /* ========================================
+       HERO
+    ======================================== */
+    .hero {
+      position: relative; min-height: 85vh;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+      padding: 140px 0 80px;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1600&q=80') center/cover no-repeat;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(10,22,40,0.92) 0%, rgba(15,27,45,0.85) 50%, rgba(62,131,188,0.7) 100%);
+    }
+    .hero-shapes {
+      position: absolute; inset: 0; overflow: hidden; pointer-events: none;
+    }
+    .hero-shape {
+      position: absolute; border-radius: 50%; opacity: 0.06;
+      background: var(--primary);
+    }
+    .hero-shape:nth-child(1) { width: 400px; height: 400px; top: -100px; right: -100px; animation: float 8s ease-in-out infinite; }
+    .hero-shape:nth-child(2) { width: 250px; height: 250px; bottom: -50px; left: -50px; animation: float 10s ease-in-out infinite 2s; }
+    .hero-shape:nth-child(3) { width: 150px; height: 150px; top: 30%; left: 10%; animation: float 6s ease-in-out infinite 1s; background: var(--secondary); }
+    .hero-content {
+      position: relative; z-index: 2; text-align: center;
+      max-width: 800px; margin: 0 auto; padding: 0 24px;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(252,216,50,0.15); border: 1px solid rgba(252,216,50,0.3);
+      color: var(--primary); padding: 10px 24px;
+      border-radius: var(--radius-xl); font-size: 0.9rem; font-weight: 600;
+      margin-bottom: 28px; letter-spacing: 0.5px;
+      backdrop-filter: blur(10px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+    .hero-badge i { font-size: 1.1rem; }
+    .hero-title {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 900; color: var(--white);
+      line-height: 1.15; margin-bottom: 24px;
+      animation: fadeUp 0.8s ease 0.15s both;
+    }
+    .highlight {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-subtitle {
+      font-size: 1.15rem; color: rgba(255,255,255,0.8);
+      max-width: 650px; margin: 0 auto 36px; line-height: 1.8; font-weight: 300;
+      animation: fadeUp 0.8s ease 0.3s both;
+    }
+    .hero-breadcrumb {
+      display: flex; align-items: center; justify-content: center;
+      gap: 10px; font-size: 0.9rem; color: rgba(255,255,255,0.6);
+      animation: fadeUp 0.8s ease 0.45s both;
+    }
+    .hero-breadcrumb a { color: rgba(255,255,255,0.7); transition: var(--transition); }
+    .hero-breadcrumb a:hover { color: var(--primary); }
+    .hero-breadcrumb .sep { color: var(--primary); font-size: 0.8rem; }
+    .hero-breadcrumb .current { color: var(--primary); font-weight: 600; }
+
+    .hero-scroll {
+      position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+      z-index: 2;
+    }
+    .hero-scroll a {
+      display: block; width: 30px; height: 50px;
+      border: 2px solid rgba(255,255,255,0.3); border-radius: 25px;
+      position: relative;
+    }
+    .hero-scroll a span {
+      position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
+      width: 6px; height: 6px; background: var(--primary); border-radius: 50%;
+      animation: scrollBounce 2s infinite;
+    }
+    @keyframes scrollBounce {
+      0% { top: 8px; opacity: 1; }
+      100% { top: 32px; opacity: 0; }
+    }
+
+    /* ========================================
+       SECTION HELPERS
+    ======================================== */
+    .section-header {
+      text-align: center; margin-bottom: 60px;
+    }
+    .section-tag {
+      display: inline-block;
+      background: rgba(62,131,188,0.1); color: var(--secondary);
+      padding: 6px 20px; border-radius: var(--radius-xl);
+      font-size: 0.85rem; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 900; color: var(--dark);
+      line-height: 1.2; margin-bottom: 16px;
+    }
+    .section-line {
+      width: 60px; height: 4px;
+      background: var(--gradient-primary);
+      border-radius: 2px; margin: 0 auto 20px;
+    }
+    .section-subtitle {
+      font-size: 1.05rem; color: var(--gray-500);
+      max-width: 600px; margin: 0 auto; line-height: 1.8;
+    }
+
+    /* ========================================
+       SERVICE OVERVIEW CARDS
+    ======================================== */
+    .service-overview {
+      padding: 100px 0;
+      background: var(--off-white);
+      position: relative;
+    }
+    .service-overview::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary), var(--primary));
+    }
+    .overview-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .overview-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 48px 36px;
+      text-align: center;
+      transition: all var(--transition);
+      border: 1px solid var(--gray-100);
+      position: relative;
+      overflow: hidden;
+    }
+    .overview-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 4px; background: var(--gradient-primary);
+      transform: scaleX(0); transition: transform var(--transition);
+      transform-origin: left;
+    }
+    .overview-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: transparent;
+    }
+    .overview-card:hover::before { transform: scaleX(1); }
+    .overview-card-icon {
+      width: 80px; height: 80px; border-radius: 50%;
+      background: linear-gradient(135deg, rgba(62,131,188,0.1), rgba(252,216,50,0.1));
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 28px;
+      font-size: 1.8rem; color: var(--secondary);
+      transition: all var(--transition);
+    }
+    .overview-card:hover .overview-card-icon {
+      background: var(--gradient-secondary);
+      color: var(--white);
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: var(--shadow-secondary);
+    }
+    .overview-card h3 {
+      font-size: 1.3rem; font-weight: 700; color: var(--dark);
+      margin-bottom: 16px;
+    }
+    .overview-card p {
+      color: var(--gray-500); line-height: 1.8; font-size: 0.95rem;
+    }
+
+    /* ========================================
+       REQUIREMENTS
+    ======================================== */
+    .requirements {
+      padding: 100px 0;
+      background: var(--white);
+      position: relative;
+    }
+    .requirements-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+    .req-card {
+      background: var(--off-white);
+      border-radius: var(--radius-lg);
+      padding: 44px 40px;
+      border: 1px solid var(--gray-100);
+      transition: all var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .req-card::after {
+      content: '';
+      position: absolute; top: 0; left: 0; width: 4px; height: 100%;
+      background: var(--gradient-secondary);
+      border-radius: 0 4px 4px 0;
+      transition: width var(--transition);
+    }
+    .req-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: transparent;
+    }
+    .req-card:hover::after { width: 6px; }
+    .req-card h3 {
+      font-size: 1.3rem; font-weight: 700; color: var(--dark);
+      margin-bottom: 28px; display: flex; align-items: center; gap: 14px;
+    }
+    .req-card h3 i {
+      color: var(--secondary); font-size: 1.1rem;
+      width: 40px; height: 40px; border-radius: var(--radius-sm);
+      background: rgba(62,131,188,0.1);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .req-list li {
+      padding: 14px 0; display: flex; align-items: flex-start; gap: 14px;
+      border-bottom: 1px solid var(--gray-200);
+      font-size: 0.95rem; color: var(--gray-700);
+      transition: var(--transition);
+    }
+    .req-list li:last-child { border-bottom: none; }
+    .req-list li:hover { padding-left: 8px; color: var(--dark); }
+    .req-list li::before {
+      content: '\f058'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
+      color: var(--secondary); font-size: 1rem; flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ========================================
+       PROCESS TIMELINE
+    ======================================== */
+    .process {
+      padding: 100px 0;
+      background: var(--gradient-dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .process .section-tag { background: rgba(252,216,50,0.15); color: var(--primary); }
+    .process .section-title { color: var(--white); }
+    .process .section-subtitle { color: rgba(255,255,255,0.6); }
+    .process-bg-shape {
+      position: absolute; border-radius: 50%; opacity: 0.03;
+    }
+    .process-bg-shape:nth-child(1) {
+      width: 500px; height: 500px; background: var(--primary);
+      top: -200px; right: -200px;
+    }
+    .process-bg-shape:nth-child(2) {
+      width: 300px; height: 300px; background: var(--secondary);
+      bottom: -100px; left: -100px;
+    }
+
+    .timeline {
+      position: relative; max-width: 800px; margin: 0 auto;
+      padding: 0 20px;
+    }
+    .timeline::before {
+      content: ''; position: absolute;
+      left: 50%; transform: translateX(-50%);
+      top: 0; bottom: 0; width: 3px;
+      background: linear-gradient(180deg, var(--primary), var(--secondary));
+      border-radius: 2px;
+    }
+    .timeline-item {
+      display: flex; align-items: flex-start;
+      margin-bottom: 60px; position: relative;
+    }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-item:nth-child(odd) { flex-direction: row; }
+    .timeline-item:nth-child(even) { flex-direction: row-reverse; }
+
+    .timeline-content {
+      width: calc(50% - 50px);
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      transition: all var(--transition);
+    }
+    .timeline-content:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+    .timeline-dot {
+      position: absolute; left: 50%; transform: translateX(-50%);
+      width: 50px; height: 50px; border-radius: 50%;
+      background: var(--gradient-primary);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; color: var(--dark); font-weight: 700;
+      z-index: 2;
+      box-shadow: 0 0 0 6px rgba(252,216,50,0.2);
+      transition: all var(--transition);
+    }
+    .timeline-item:hover .timeline-dot {
+      box-shadow: 0 0 0 10px rgba(252,216,50,0.3);
+      transform: translateX(-50%) scale(1.1);
+    }
+    .timeline-step {
+      font-size: 0.8rem; font-weight: 700; color: var(--primary);
+      text-transform: uppercase; letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+    .timeline-content h3 {
+      font-size: 1.15rem; font-weight: 700; color: var(--white);
+      margin-bottom: 10px;
+    }
+    .timeline-content p {
+      font-size: 0.92rem; color: rgba(255,255,255,0.65); line-height: 1.7;
+    }
+    .timeline-icon {
+      width: 44px; height: 44px; border-radius: var(--radius-sm);
+      background: rgba(252,216,50,0.1);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--primary); font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    /* ========================================
+       KEY INFO CARDS
+    ======================================== */
+    .key-info {
+      padding: 80px 0;
+      background: var(--off-white);
+    }
+    .key-info-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .key-info-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 44px 32px;
+      text-align: center;
+      border: 1px solid var(--gray-100);
+      transition: all var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .key-info-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: var(--gradient-primary);
+      opacity: 0; transition: opacity var(--transition);
+    }
+    .key-info-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-primary);
+      border-color: transparent;
+    }
+    .key-info-card:hover::before { opacity: 1; }
+    .key-info-card > * { position: relative; z-index: 1; }
+    .key-info-card:hover .key-info-icon { background: var(--white); color: var(--dark); }
+    .key-info-card:hover h4 { color: var(--dark); }
+    .key-info-card:hover .key-info-value { color: var(--dark); }
+    .key-info-card:hover .key-info-label { color: var(--gray-700); }
+    .key-info-icon {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: rgba(62,131,188,0.1);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 1.6rem; color: var(--secondary);
+      transition: all var(--transition);
+    }
+    .key-info-value {
+      font-size: 2rem; font-weight: 900; color: var(--dark);
+      margin-bottom: 6px; transition: var(--transition);
+    }
+    .key-info-label {
+      font-size: 0.95rem; color: var(--gray-500);
+      font-weight: 500; transition: var(--transition);
+    }
+
+    /* ========================================
+       FAQ
+    ======================================== */
+    .faq {
+      padding: 100px 0;
+      background: var(--white);
+    }
+    .faq-list {
+      max-width: 800px; margin: 0 auto;
+    }
+    .faq-item {
+      background: var(--off-white);
+      border-radius: var(--radius-md);
+      margin-bottom: 16px;
+      border: 1px solid var(--gray-100);
+      overflow: hidden;
+      transition: all var(--transition);
+    }
+    .faq-item:hover { border-color: var(--gray-200); }
+    .faq-item.active {
+      border-color: var(--secondary);
+      box-shadow: var(--shadow-secondary);
+    }
+    .faq-question {
+      width: 100%; background: none; border: none;
+      padding: 24px 28px; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; text-align: left;
+      font-family: 'Lato', sans-serif;
+      font-size: 1.05rem; font-weight: 700;
+      color: var(--dark);
+      transition: var(--transition);
+    }
+    .faq-question:hover { color: var(--secondary); }
+    .faq-question i {
+      font-size: 0.9rem; color: var(--secondary);
+      transition: transform var(--transition);
+      flex-shrink: 0;
+    }
+    .faq-item.active .faq-question i { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.5s;
+      padding: 0 28px;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      padding: 0 28px 24px;
+    }
+    .faq-answer p {
+      color: var(--gray-500); font-size: 0.95rem; line-height: 1.8;
+    }
+
+    /* ========================================
+       CTA BANNER
+    ======================================== */
+    .cta-banner {
+      padding: 100px 0;
+      background: var(--gradient-dark);
+      position: relative; overflow: hidden; text-align: center;
+    }
+    .cta-banner::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(circle at 30% 50%, rgba(62,131,188,0.15) 0%, transparent 60%),
+                  radial-gradient(circle at 70% 50%, rgba(252,216,50,0.1) 0%, transparent 60%);
+    }
+    .cta-banner > * { position: relative; z-index: 1; }
+    .cta-content h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 900; color: var(--white);
+      margin-bottom: 20px;
+    }
+    .cta-content p {
+      font-size: 1.1rem; color: rgba(255,255,255,0.7);
+      max-width: 600px; margin: 0 auto 40px; line-height: 1.8;
+    }
+    .cta-buttons {
+      display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+    }
+
+    /* ========================================
+       BUTTONS
+    ======================================== */
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 32px; border-radius: var(--radius-xl);
+      font-weight: 700; font-size: 0.95rem;
+      transition: all var(--transition);
+      border: none; cursor: pointer;
+      font-family: 'Lato', sans-serif;
+    }
+    .btn-primary {
+      background: var(--gradient-primary); color: var(--dark);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-primary);
+    }
+    .btn-outline {
+      background: transparent; color: var(--white);
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    .btn-outline:hover {
+      border-color: var(--primary); color: var(--primary);
+      transform: translateY(-3px);
+    }
+    .btn-block { width: 100%; justify-content: center; }
+
+    /* ========================================
+       CONTACT
+    ======================================== */
+    .contact-section {
+      padding: 100px 0;
+      background: var(--off-white);
+      position: relative;
+    }
+    .contact-section .section-title { color: var(--dark); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1.1fr;
+      gap: 48px; align-items: flex-start;
+    }
+    .contact-info-card {
+      display: flex; align-items: flex-start; gap: 18px;
+      padding: 20px; background: var(--white);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--gray-100);
+      margin-bottom: 16px;
+      transition: all var(--transition);
+    }
+    .contact-info-card:hover {
+      transform: translateX(6px);
+      box-shadow: var(--shadow-sm);
+      border-color: var(--secondary);
+    }
+    .contact-icon {
+      width: 48px; height: 48px; border-radius: var(--radius-sm);
+      background: rgba(62,131,188,0.1);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--secondary); flex-shrink: 0;
+    }
+    .contact-info-card h5 {
+      font-size: 0.85rem; color: var(--gray-500);
+      text-transform: uppercase; letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .contact-info-card p {
+      font-size: 0.95rem; color: var(--dark); font-weight: 500;
+    }
+    .contact-highlights {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      border: 1px solid var(--gray-100);
+      margin-top: 8px;
+    }
+    .contact-highlights h4 {
+      font-size: 1.15rem; font-weight: 700; color: var(--dark);
+      margin-bottom: 20px;
+    }
+    .contact-highlights li {
+      padding: 10px 0; display: flex; align-items: center; gap: 12px;
+      font-size: 0.92rem; color: var(--gray-700);
+    }
+    .contact-highlights li::before {
+      content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
+      color: var(--primary); font-size: 0.8rem;
+      width: 24px; height: 24px;
+      background: rgba(252,216,50,0.15);
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%; flex-shrink: 0;
+    }
+    .contact-form-wrapper {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 44px;
+      border: 1px solid var(--gray-100);
+      box-shadow: var(--shadow-sm);
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label {
+      display: block; font-size: 0.85rem; font-weight: 600;
+      color: var(--dark); margin-bottom: 8px;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 14px 18px;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      font-family: 'Lato', sans-serif;
+      font-size: 0.95rem; color: var(--dark);
+      background: var(--off-white);
+      transition: all var(--transition);
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 4px rgba(62,131,188,0.1);
+      background: var(--white);
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-group select { cursor: pointer; -webkit-appearance: none; appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7a8d' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 16px center;
+    }
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+    .footer {
+      background: var(--navy);
+      padding: 80px 0 0;
+      position: relative;
+    }
+    .footer-wave {
+      position: absolute; top: -1px; left: 0; right: 0;
+      transform: translateY(-99%);
+    }
+    .footer-wave svg { display: block; width: 100%; height: 80px; }
+    .footer-grid {
+      display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px; padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-brand p {
+      color: rgba(255,255,255,0.5); font-size: 0.92rem;
+      margin: 20px 0; line-height: 1.8;
+    }
+    .footer-logo { height: 48px; width: auto; }
+    .footer-socials {
+      display: flex; gap: 12px; margin-top: 16px;
+    }
+    .footer-socials a {
+      width: 40px; height: 40px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.6);
+      transition: all var(--transition);
+    }
+    .footer-socials a:hover {
+      background: var(--primary); border-color: var(--primary);
+      color: var(--dark); transform: translateY(-3px);
+    }
+    .footer-links h4 {
+      color: var(--white); font-size: 1.05rem;
+      font-weight: 700; margin-bottom: 24px;
+    }
+    .footer-links li { margin-bottom: 12px; }
+    .footer-links a {
+      color: rgba(255,255,255,0.5); font-size: 0.9rem;
+      transition: all var(--transition);
+    }
+    .footer-links a:hover { color: var(--primary); padding-left: 6px; }
+    .footer-bottom {
+      padding: 28px 0; text-align: center;
+    }
+    .footer-bottom p {
+      color: rgba(255,255,255,0.35); font-size: 0.85rem;
+    }
+
+    /* ========================================
+       BACK TO TOP
+    ======================================== */
+    .back-to-top {
+      position: fixed; bottom: 30px; right: 30px;
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--gradient-primary); color: var(--dark);
+      border: none; cursor: pointer; z-index: 999;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; opacity: 0; visibility: hidden;
+      transform: translateY(20px);
+      transition: all var(--transition);
+      box-shadow: var(--shadow-primary);
+    }
+    .back-to-top.visible {
+      opacity: 1; visibility: visible;
+      transform: translateY(0);
+    }
+    .back-to-top:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(252,216,50,0.4);
+    }
+
+    /* ========================================
+       RESPONSIVE
+    ======================================== */
+    @media (max-width: 1024px) {
+      .overview-grid { grid-template-columns: repeat(2, 1fr); }
+      .timeline::before { left: 30px; transform: none; }
+      .timeline-item,
+      .timeline-item:nth-child(odd),
+      .timeline-item:nth-child(even) {
+        flex-direction: row !important;
+      }
+      .timeline-content { width: calc(100% - 80px); margin-left: auto; }
+      .timeline-dot { left: 30px; transform: translateX(-50%); }
+      .timeline-item:hover .timeline-dot { transform: translateX(-50%) scale(1.1); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: fixed; top: 0; right: -100%; width: 300px; height: 100vh;
+        background: var(--dark); flex-direction: column;
+        align-items: flex-start; padding: 80px 32px 32px;
+        transition: right var(--transition);
+        box-shadow: -10px 0 40px rgba(0,0,0,0.3);
+      }
+      .nav-menu.active { right: 0; }
+      .nav-toggle { display: flex; }
+      .nav-link { width: 100%; padding: 14px 0; font-size: 1.05rem; }
+      .nav-link.cta-btn { text-align: center; margin-top: 16px; }
+
+      .hero { min-height: 75vh; padding: 120px 0 60px; }
+      .hero-title { font-size: 2rem; }
+      .overview-grid { grid-template-columns: 1fr; }
+      .requirements-grid { grid-template-columns: 1fr; }
+      .key-info-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-form-wrapper { padding: 28px; }
+      .form-row { grid-template-columns: 1fr; }
+
+      .timeline::before { left: 22px; }
+      .timeline-dot { width: 44px; height: 44px; left: 22px; font-size: 1rem; }
+      .timeline-content { width: calc(100% - 64px); padding: 24px; }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .hero { min-height: 70vh; padding: 110px 0 50px; }
+      .hero-title { font-size: 1.7rem; }
+      .hero-subtitle { font-size: 1rem; }
+      .overview-card { padding: 36px 24px; }
+      .req-card { padding: 32px 24px; }
+      .section-title { font-size: 1.6rem; }
+      .back-to-top { bottom: 20px; right: 20px; width: 42px; height: 42px; }
+    }
+
+    /* ========================================
+       REDUCED MOTION
+    ======================================== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto; }
+      .fade-up, .fade-left, .fade-right, .scale-in { opacity: 1; }
+      .hero-shape { animation: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======= NAVBAR ======= -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../../index.html" class="nav-logo">
+        <img src="../../assets/logo.png" alt="De Guzman International Visa Consultancy" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../../index.html" class="nav-link">Home</a></li>
+        <li><a href="../../index.html#about" class="nav-link">About</a></li>
+        <li><a href="../../index.html#services" class="nav-link">Services</a></li>
+        <li><a href="../../index.html#contact" class="nav-link">Contact Us</a></li>
+        <li><a href="../../index.html#contact" class="nav-link cta-btn">Get Visa Assistance</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ======= HERO ======= -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-shapes" aria-hidden="true">
+      <div class="hero-shape"></div>
+      <div class="hero-shape"></div>
+      <div class="hero-shape"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-plane-arrival"></i> Inbound Visa Processing
+      </div>
+      <h1 class="hero-title">
+        Inbound Visa <span class="highlight">Processing</span>
+      </h1>
+      <p class="hero-subtitle">
+        End-to-end assistance for foreign nationals relocating to the Philippines &mdash; from entry visas to Bureau of Immigration requirements.
+      </p>
+      <div class="hero-breadcrumb">
+        <a href="../../index.html">Home</a>
+        <span class="sep"><i class="fas fa-chevron-right"></i></span>
+        <a href="../../index.html#services">Services</a>
+        <span class="sep"><i class="fas fa-chevron-right"></i></span>
+        <span class="current">Inbound Visa Processing</span>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <a href="#overview"><span></span></a>
+    </div>
+  </section>
+
+  <!-- ======= SERVICE OVERVIEW ======= -->
+  <section class="service-overview" id="overview">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">What We Offer</span>
+        <h2 class="section-title">Comprehensive <span class="highlight">Inbound Services</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">
+          From your first inquiry to maintaining legal status, we handle every step of your inbound visa journey.
+        </p>
+      </div>
+
+      <div class="overview-grid">
+        <div class="overview-card fade-up delay-1">
+          <div class="overview-card-icon"><i class="fas fa-stamp"></i></div>
+          <h3>Entry Visa Assistance</h3>
+          <p>Complete assistance with obtaining the appropriate entry visa before traveling to the Philippines. We handle embassy coordination and documentation.</p>
+        </div>
+        <div class="overview-card fade-up delay-2">
+          <div class="overview-card-icon"><i class="fas fa-exchange-alt"></i></div>
+          <h3>Visa Conversion</h3>
+          <p>Convert your tourist or temporary visa to a work, student, or resident visa without leaving the country. Streamlined process through the Bureau of Immigration.</p>
+        </div>
+        <div class="overview-card fade-up delay-3">
+          <div class="overview-card-icon"><i class="fas fa-building-columns"></i></div>
+          <h3>BI Compliance &amp; Registration</h3>
+          <p>Full support with Bureau of Immigration registration, reporting requirements, and maintaining legal status throughout your stay.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= REQUIREMENTS ======= -->
+  <section class="requirements" id="requirements">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Documentation</span>
+        <h2 class="section-title">What You'll <span class="highlight">Need</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">
+          Prepare these documents to ensure a smooth and efficient visa processing experience.
+        </p>
+      </div>
+
+      <div class="requirements-grid">
+        <div class="req-card fade-left">
+          <h3><i class="fas fa-suitcase-rolling"></i> Pre-Arrival Documents</h3>
+          <ul class="req-list">
+            <li>Valid passport (6+ months validity)</li>
+            <li>Visa approval letter or entry permit</li>
+            <li>Round-trip or onward flight booking</li>
+            <li>Proof of accommodation</li>
+          </ul>
+        </div>
+        <div class="req-card fade-right">
+          <h3><i class="fas fa-landmark"></i> Post-Arrival Requirements</h3>
+          <ul class="req-list">
+            <li>Bureau of Immigration registration</li>
+            <li>ACR I-Card application (stays over 59 days)</li>
+            <li>Visa conversion documents (if applicable)</li>
+            <li>Medical clearance (for certain visa types)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= PROCESS TIMELINE ======= -->
+  <section class="process" id="process">
+    <div class="process-bg-shape" aria-hidden="true"></div>
+    <div class="process-bg-shape" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">How It Works</span>
+        <h2 class="section-title">Our <span class="highlight">Process</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">
+          A clear, structured approach to get you legally settled in the Philippines.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <!-- Step 1 -->
+        <div class="timeline-item fade-up">
+          <div class="timeline-content">
+            <div class="timeline-icon"><i class="fas fa-globe"></i></div>
+            <span class="timeline-step">Step 01</span>
+            <h3>Pre-Arrival Planning</h3>
+            <p>We assess your situation and advise on the correct entry visa type.</p>
+          </div>
+          <div class="timeline-dot">1</div>
+        </div>
+        <!-- Step 2 -->
+        <div class="timeline-item fade-up delay-1">
+          <div class="timeline-content">
+            <div class="timeline-icon"><i class="fas fa-folder-open"></i></div>
+            <span class="timeline-step">Step 02</span>
+            <h3>Documentation Support</h3>
+            <p>We help you prepare all documents needed for embassy application.</p>
+          </div>
+          <div class="timeline-dot">2</div>
+        </div>
+        <!-- Step 3 -->
+        <div class="timeline-item fade-up delay-2">
+          <div class="timeline-content">
+            <div class="timeline-icon"><i class="fas fa-plane-arrival"></i></div>
+            <span class="timeline-step">Step 03</span>
+            <h3>Entry Coordination</h3>
+            <p>We provide guidance for immigration clearance upon arrival.</p>
+          </div>
+          <div class="timeline-dot">3</div>
+        </div>
+        <!-- Step 4 -->
+        <div class="timeline-item fade-up delay-3">
+          <div class="timeline-content">
+            <div class="timeline-icon"><i class="fas fa-clipboard-check"></i></div>
+            <span class="timeline-step">Step 04</span>
+            <h3>Post-Arrival Registration</h3>
+            <p>We handle BI registration, ACR I-Card, and any conversion needs.</p>
+          </div>
+          <div class="timeline-dot">4</div>
+        </div>
+        <!-- Step 5 -->
+        <div class="timeline-item fade-up delay-4">
+          <div class="timeline-content">
+            <div class="timeline-icon"><i class="fas fa-shield-halved"></i></div>
+            <span class="timeline-step">Step 05</span>
+            <h3>Ongoing Compliance</h3>
+            <p>We ensure you maintain valid immigration status throughout your stay.</p>
+          </div>
+          <div class="timeline-dot">5</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= KEY INFO CARDS ======= -->
+  <section class="key-info" id="key-info">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">At A Glance</span>
+        <h2 class="section-title">Key <span class="highlight">Information</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="key-info-grid">
+        <div class="key-info-card fade-up delay-1">
+          <div class="key-info-icon"><i class="fas fa-clock"></i></div>
+          <div class="key-info-value">2-4 Weeks</div>
+          <div class="key-info-label">Entry Processing</div>
+        </div>
+        <div class="key-info-card fade-up delay-2">
+          <div class="key-info-icon"><i class="fas fa-calendar-check"></i></div>
+          <div class="key-info-value">30-60 Days</div>
+          <div class="key-info-label">Visa Conversion</div>
+        </div>
+        <div class="key-info-card fade-up delay-3">
+          <div class="key-info-icon"><i class="fas fa-hand-holding-dollar"></i></div>
+          <div class="key-info-value">Free</div>
+          <div class="key-info-label">Consultation</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FAQ ======= -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">
+          Get quick answers to common questions about inbound visa processing in the Philippines.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item fade-up">
+          <button class="faq-question" aria-expanded="false">
+            Do I need a visa before arriving in the Philippines?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>It depends on your nationality. Many countries enjoy visa-free entry for up to 30 days. Others require a visa obtained from a Philippine embassy. We can verify your specific requirements.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-up delay-1">
+          <button class="faq-question" aria-expanded="false">
+            Can I convert my tourist visa to a work visa?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, visa conversion from tourist to work visa is possible through the Bureau of Immigration. You'll need an employer sponsor and the standard work visa requirements. We handle the entire process.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-up delay-2">
+          <button class="faq-question" aria-expanded="false">
+            What happens at immigration when I arrive?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Immigration officers will check your passport, visa (if required), return ticket, and may ask about your purpose of visit. We provide pre-arrival guidance to ensure a smooth entry experience.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-up delay-3">
+          <button class="faq-question" aria-expanded="false">
+            How soon after arriving should I register with the BI?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>If staying beyond 59 days, you must obtain an ACR I-Card. We recommend starting the process within your first month to avoid last-minute complications.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= CTA BANNER ======= -->
+  <section class="cta-banner">
+    <div class="container cta-content fade-up">
+      <h2>Relocating to the Philippines?</h2>
+      <p>From pre-arrival planning to post-arrival registration, we handle everything so you can focus on your new life.</p>
+      <div class="cta-buttons">
+        <a href="#contact-section" class="btn btn-primary">
+          <i class="fas fa-paper-plane"></i> Get Free Consultation
+        </a>
+        <a href="tel:+639085375177" class="btn btn-outline">
+          <i class="fas fa-phone"></i> Call Us Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= CONTACT SECTION ======= -->
+  <section class="contact-section" id="contact-section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact <span class="highlight">Us</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">
+          Ready to take the next step? Reach out to us for a free initial consultation.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info fade-left">
+          <div class="contact-info-card">
+            <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+            <div>
+              <h5>Location</h5>
+              <p>Philippines, serving nationwide</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon"><i data-lucide="phone"></i></div>
+            <div>
+              <h5>Phone</h5>
+              <p>+639 085 375 177</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon"><i data-lucide="mail"></i></div>
+            <div>
+              <h5>Email us</h5>
+              <p>shawiedginternational@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon"><i data-lucide="clock"></i></div>
+            <div>
+              <h5>Business hours</h5>
+              <p>Monday &ndash; Friday: 9:00 AM &ndash; 6:00 PM</p>
+            </div>
+          </div>
+
+          <div class="contact-highlights">
+            <h4>Why Choose Us?</h4>
+            <ul>
+              <li>8+ years of visa industry experience</li>
+              <li>Personalized service for each client</li>
+              <li>Quick response and processing</li>
+              <li>Competitive and transparent pricing</li>
+              <li>Support for all visa types and nationalities</li>
+              <li>Free Visa Consultation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper fade-right">
+          <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="1020194d-bb82-4e9c-987f-bd45b27df8db" />
+            <input type="hidden" name="subject" value="Inbound Visa Inquiry from DGI Website" />
+            <input type="hidden" name="from_name" value="De Guzman International Visa Consultancy Website" />
+            <input type="hidden" name="redirect" value="https://www.deguzmaninternational.com/pages/thank-you/" />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="John" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Doe" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+63 917 123 4567" required />
+            </div>
+            <div class="form-group">
+              <label for="nationality">Nationality</label>
+              <input type="text" id="nationality" name="nationality" placeholder="e.g. American, British" required />
+            </div>
+            <div class="form-group">
+              <label for="visaType">Visa Type</label>
+              <select id="visaType" name="visaType">
+                <option value="" disabled selected>Select visa type</option>
+                <option value="entry-visa">Entry Visa</option>
+                <option value="tourist-to-work">Tourist to Work Visa Conversion</option>
+                <option value="tourist-to-student">Tourist to Student Visa Conversion</option>
+                <option value="acr-icard">ACR I-Card Application</option>
+                <option value="bi-registration">BI Registration</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your visa needs..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+        <path d="M0,64 C288,120 576,10 864,64 C1152,120 1296,40 1440,80 L1440,150 L0,150 Z" fill="#0a1628"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../../assets/logo.png" alt="DGIVC Logo" class="footer-logo" />
+          <p>Your trusted partner in navigating the world of international immigration and visa processing.</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/profile.php?id=61577828194156" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/shawie-de-guzman-29646615a/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#about">About Us</a></li>
+            <li><a href="../../index.html#services">Services</a></li>
+            <li><a href="../../index.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="../../index.html#services">Short Term Visas</a></li>
+            <li><a href="../../index.html#services">Work Visas</a></li>
+            <li><a href="../../index.html#services">Permanent Visas</a></li>
+            <li><a href="../../index.html#services">Visa Extensions</a></li>
+            <li><a href="#">Inbound Visa Processing</a></li>
+            <li><a href="../../index.html#services">Balikbayan &amp; Dual Citizenship</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../privacy-policy/">Privacy Policy</a></li>
+            <li><a href="../terms-of-service/">Terms of Service</a></li>
+            <li><a href="../cookie-policy/">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 De Guzman International Visa Consultancy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    /* ========================================
+       INITIALIZATION
+    ======================================== */
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize Lucide icons
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+
+      /* ========================================
+         NAVBAR
+      ======================================== */
+      const navbar = document.getElementById('navbar');
+      const navToggle = document.getElementById('navToggle');
+      const navMenu = document.getElementById('navMenu');
+
+      // Scroll handling
+      function handleNavScroll() {
+        if (window.scrollY > 60) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      }
+      window.addEventListener('scroll', handleNavScroll, { passive: true });
+      handleNavScroll();
+
+      // Mobile toggle
+      navToggle.addEventListener('click', function() {
+        navToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      // Close mobile menu on link click
+      document.querySelectorAll('.nav-link').forEach(function(link) {
+        link.addEventListener('click', function() {
+          navToggle.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
+
+      // Close menu on outside click
+      document.addEventListener('click', function(e) {
+        if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+          navToggle.classList.remove('active');
+          navMenu.classList.remove('active');
+        }
+      });
+
+      /* ========================================
+         SCROLL ANIMATIONS (Intersection Observer)
+      ======================================== */
+      const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.fade-up, .fade-left, .fade-right, .scale-in').forEach(function(el) {
+        observer.observe(el);
+      });
+
+      /* ========================================
+         FAQ ACCORDION
+      ======================================== */
+      document.querySelectorAll('.faq-question').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          const item = this.closest('.faq-item');
+          const isActive = item.classList.contains('active');
+          const expanded = this.getAttribute('aria-expanded') === 'true';
+
+          // Close all items
+          document.querySelectorAll('.faq-item').forEach(function(i) {
+            i.classList.remove('active');
+            i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          });
+
+          // Open clicked if it wasn't active
+          if (!isActive) {
+            item.classList.add('active');
+            this.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      /* ========================================
+         BACK TO TOP
+      ======================================== */
+      const backToTop = document.getElementById('backToTop');
+
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 500) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      }, { passive: true });
+
+      backToTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      /* ========================================
+         SMOOTH SCROLL FOR ANCHOR LINKS
+      ======================================== */
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          const target = document.querySelector(targetId);
+          if (target) {
+            e.preventDefault();
+            const offset = navbar.offsetHeight + 20;
+            const position = target.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top: position, behavior: 'smooth' });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

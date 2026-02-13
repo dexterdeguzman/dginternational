@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Permanent Visas | De Guzman International Visa Consultancy</title>
+  <meta name="description" content="SRRV, 13(a) quota visas, and permanent residency applications for those looking to settle in the Philippines long-term. Expert visa consultancy services." />
+  <link rel="icon" type="image/png" href="../../assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    /* ========================================
+       CSS VARIABLES / DESIGN SYSTEM
+    ======================================== */
+    :root {
+      --primary: #FCD832;
+      --primary-dark: #e0bf00;
+      --secondary: #3E83BC;
+      --secondary-dark: #2a6699;
+      --secondary-light: #5ba0d9;
+      --dark: #0f1b2d;
+      --dark-2: #162236;
+      --dark-3: #1a2a42;
+      --navy: #0a1628;
+      --white: #ffffff;
+      --off-white: #f8f9fb;
+      --gray-100: #eef1f5;
+      --gray-200: #dce1e8;
+      --gray-300: #b0b8c5;
+      --gray-500: #6b7a8d;
+      --gray-700: #3a4553;
+      --gradient-primary: linear-gradient(135deg, var(--primary) 0%, #f0c800 100%);
+      --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+      --gradient-dark: linear-gradient(180deg, var(--dark) 0%, var(--navy) 100%);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 8px 30px rgba(0,0,0,0.12);
+      --shadow-lg: 0 20px 60px rgba(0,0,0,0.15);
+      --shadow-primary: 0 8px 30px rgba(252,216,50,0.25);
+      --shadow-secondary: 0 8px 30px rgba(62,131,188,0.25);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 30px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ========================================
+       RESET & BASE
+    ======================================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      color: var(--gray-700);
+      background: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; transition: var(--transition); }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .highlight { color: var(--primary); }
+
+    /* ========================================
+       ANIMATION CLASSES
+    ======================================== */
+    .fade-up, .fade-left, .fade-right {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-left { transform: translateX(-40px); }
+    .fade-right { transform: translateX(40px); }
+    .fade-up.visible, .fade-left.visible, .fade-right.visible {
+      opacity: 1;
+      transform: translate(0);
+    }
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up, .fade-left, .fade-right {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* ========================================
+       BUTTONS
+    ======================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      border-radius: var(--radius-xl);
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: var(--transition);
+      text-align: center;
+      justify-content: center;
+    }
+    .btn-primary {
+      background: var(--gradient-primary);
+      color: var(--dark);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-primary);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(252,216,50,0.4);
+    }
+    .btn-secondary {
+      background: var(--gradient-secondary);
+      color: var(--white);
+      border-color: var(--secondary);
+      box-shadow: var(--shadow-secondary);
+    }
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(62,131,188,0.4);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.4);
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: var(--white);
+      transform: translateY(-3px);
+    }
+    .btn-block { width: 100%; }
+
+    /* ========================================
+       SECTION HEADERS
+    ======================================== */
+    .section-header { text-align: center; margin-bottom: 60px; }
+    .section-tag {
+      display: inline-block;
+      background: rgba(62,131,188,0.1);
+      color: var(--secondary);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      border-radius: var(--radius-xl);
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 900;
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .section-line {
+      width: 60px;
+      height: 4px;
+      background: var(--gradient-primary);
+      border-radius: 2px;
+      margin: 16px auto;
+    }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--gray-500);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ========================================
+       NAVBAR
+    ======================================== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(15, 27, 45, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      transition: var(--transition);
+    }
+    .navbar.scrolled {
+      background: rgba(10, 22, 40, 0.98);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 75px;
+    }
+    .nav-logo img { height: 48px; width: auto; }
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-link {
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 10px 18px;
+      border-radius: var(--radius-xl);
+      transition: var(--transition);
+    }
+    .nav-link:hover {
+      color: var(--primary);
+      background: rgba(252,216,50,0.08);
+    }
+    .nav-link.cta-btn {
+      background: var(--gradient-primary);
+      color: var(--dark);
+      font-weight: 700;
+      padding: 10px 24px;
+      margin-left: 8px;
+      box-shadow: var(--shadow-primary);
+    }
+    .nav-link.cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 35px rgba(252,216,50,0.35);
+    }
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 26px;
+      height: 2.5px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* ========================================
+       HERO SECTION
+    ======================================== */
+    .hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 140px 24px 80px;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&q=80') center/cover no-repeat;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,22,40,0.92) 0%, rgba(15,27,45,0.82) 50%, rgba(62,131,188,0.4) 100%);
+    }
+    .hero-decoration {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .hero-decoration .circle {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(252,216,50,0.1);
+    }
+    .hero-decoration .circle-1 {
+      width: 400px; height: 400px;
+      top: -100px; right: -100px;
+      animation: float-slow 15s ease-in-out infinite;
+    }
+    .hero-decoration .circle-2 {
+      width: 250px; height: 250px;
+      bottom: -50px; left: -50px;
+      border-color: rgba(62,131,188,0.15);
+      animation: float-slow 12s ease-in-out infinite reverse;
+    }
+    .hero-decoration .circle-3 {
+      width: 150px; height: 150px;
+      top: 30%; left: 10%;
+      border-color: rgba(252,216,50,0.06);
+      animation: float-slow 10s ease-in-out infinite;
+    }
+    @keyframes float-slow {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(252,216,50,0.12);
+      border: 1px solid rgba(252,216,50,0.25);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 10px 24px;
+      border-radius: var(--radius-xl);
+      margin-bottom: 24px;
+    }
+    .hero-badge i { font-size: 1rem; }
+    .hero-title {
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.75);
+      font-weight: 300;
+      line-height: 1.8;
+      max-width: 650px;
+      margin: 0 auto 32px;
+    }
+    .hero-breadcrumb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 24px;
+    }
+    .hero-breadcrumb a { color: rgba(255,255,255,0.7); }
+    .hero-breadcrumb a:hover { color: var(--primary); }
+    .hero-breadcrumb .separator { color: rgba(255,255,255,0.3); }
+    .hero-breadcrumb .current { color: var(--primary); font-weight: 600; }
+
+    /* ========================================
+       SERVICE OVERVIEW CARDS
+    ======================================== */
+    .overview { padding: 100px 0; background: var(--off-white); position: relative; }
+    .overview::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-primary);
+    }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .overview-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-100);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .overview-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-secondary);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+    .overview-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(62,131,188,0.2);
+    }
+    .overview-card:hover::before { transform: scaleX(1); }
+    .overview-card-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, rgba(62,131,188,0.1) 0%, rgba(62,131,188,0.05) 100%);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      color: var(--secondary);
+      margin-bottom: 24px;
+      transition: var(--transition);
+    }
+    .overview-card:hover .overview-card-icon {
+      background: var(--gradient-secondary);
+      color: var(--white);
+      transform: scale(1.05);
+    }
+    .overview-card h3 {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .overview-card p {
+      color: var(--gray-500);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* ========================================
+       REQUIREMENTS SECTION
+    ======================================== */
+    .requirements {
+      padding: 100px 0;
+      background: var(--white);
+      position: relative;
+    }
+    .requirements-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+    .requirement-block {
+      background: var(--off-white);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      border: 1px solid var(--gray-100);
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .requirement-block:hover {
+      box-shadow: var(--shadow-md);
+      border-color: rgba(62,131,188,0.15);
+    }
+    .requirement-block::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient-primary);
+    }
+    .requirement-block h3 {
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: var(--dark);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .requirement-block h3 i {
+      color: var(--secondary);
+      font-size: 1.1rem;
+    }
+    .requirement-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--gray-100);
+      font-size: 0.95rem;
+      color: var(--gray-700);
+    }
+    .requirement-list li:last-child { border-bottom: none; }
+    .requirement-list li::before {
+      content: '\f00c';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      color: var(--secondary);
+      font-size: 0.8rem;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    /* ========================================
+       PROCESS TIMELINE
+    ======================================== */
+    .process {
+      padding: 100px 0;
+      background: var(--gradient-dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .process .section-title { color: var(--white); }
+    .process .section-subtitle { color: rgba(255,255,255,0.6); }
+    .process .section-tag { background: rgba(252,216,50,0.12); color: var(--primary); }
+    .process-decoration {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .process-decoration .glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+    }
+    .process-decoration .glow-1 {
+      width: 300px; height: 300px;
+      background: rgba(62,131,188,0.15);
+      top: 10%; right: -50px;
+    }
+    .process-decoration .glow-2 {
+      width: 250px; height: 250px;
+      background: rgba(252,216,50,0.08);
+      bottom: 10%; left: -80px;
+    }
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 44px;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, var(--secondary), var(--primary));
+      border-radius: 3px;
+      opacity: 0.3;
+    }
+    .timeline-item {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+      padding-bottom: 50px;
+      position: relative;
+    }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-number {
+      width: 90px;
+      height: 90px;
+      min-width: 90px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--primary);
+      background: rgba(252,216,50,0.08);
+      border: 2px solid rgba(252,216,50,0.2);
+      position: relative;
+      z-index: 2;
+      transition: var(--transition);
+    }
+    .timeline-item:hover .timeline-number {
+      background: rgba(252,216,50,0.15);
+      border-color: rgba(252,216,50,0.4);
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(252,216,50,0.15);
+    }
+    .timeline-step {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 6px;
+      opacity: 0.7;
+    }
+    .timeline-content h3 {
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .timeline-content p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* ========================================
+       KEY INFO CARDS
+    ======================================== */
+    .key-info { padding: 100px 0; background: var(--off-white); }
+    .key-info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .key-info-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-100);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .key-info-card::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 120px;
+      height: 120px;
+      background: rgba(62,131,188,0.05);
+      border-radius: 50%;
+      transition: var(--transition);
+    }
+    .key-info-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+    .key-info-card:hover::before {
+      width: 200px;
+      height: 200px;
+      top: -80px;
+      right: -80px;
+    }
+    .key-info-icon {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 1.4rem;
+      background: linear-gradient(135deg, rgba(62,131,188,0.1), rgba(62,131,188,0.05));
+      color: var(--secondary);
+      transition: var(--transition);
+    }
+    .key-info-card:hover .key-info-icon {
+      background: var(--gradient-secondary);
+      color: var(--white);
+      transform: scale(1.1);
+    }
+    .key-info-label {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .key-info-value {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--dark);
+      line-height: 1.2;
+    }
+
+    /* ========================================
+       FAQ SECTION
+    ======================================== */
+    .faq { padding: 100px 0; background: var(--white); }
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      background: var(--off-white);
+      border-radius: var(--radius-md);
+      margin-bottom: 16px;
+      border: 1px solid var(--gray-100);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .faq-item:hover {
+      border-color: rgba(62,131,188,0.2);
+    }
+    .faq-item.active {
+      border-color: rgba(62,131,188,0.3);
+      box-shadow: var(--shadow-sm);
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 24px 28px;
+      text-align: left;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--dark);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-family: 'Lato', sans-serif;
+      transition: var(--transition);
+    }
+    .faq-question:hover { color: var(--secondary); }
+    .faq-question .faq-icon {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      border-radius: 50%;
+      background: rgba(62,131,188,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: var(--secondary);
+      transition: var(--transition);
+    }
+    .faq-item.active .faq-icon {
+      background: var(--gradient-secondary);
+      color: var(--white);
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    .faq-answer-inner {
+      padding: 0 28px 24px;
+      color: var(--gray-500);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    /* ========================================
+       CTA BANNER
+    ======================================== */
+    .cta-banner {
+      padding: 100px 0;
+      background: var(--gradient-dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner-decoration {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .cta-banner-decoration .accent {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+    }
+    .cta-banner-decoration .accent-1 {
+      width: 300px; height: 300px;
+      background: rgba(252,216,50,0.1);
+      top: -100px; left: 20%;
+    }
+    .cta-banner-decoration .accent-2 {
+      width: 200px; height: 200px;
+      background: rgba(62,131,188,0.12);
+      bottom: -80px; right: 15%;
+    }
+    .cta-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .cta-content h2 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .cta-content p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 36px;
+      font-weight: 300;
+    }
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ========================================
+       CONTACT SECTION
+    ======================================== */
+    .contact { padding: 100px 0; background: var(--off-white); position: relative; }
+    .contact .section-shape-top {
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 100%;
+      line-height: 0;
+    }
+    .contact .section-shape-top svg { width: 100%; height: 80px; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 50px;
+      align-items: start;
+    }
+    .contact-info-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 20px;
+      background: var(--white);
+      border-radius: var(--radius-md);
+      margin-bottom: 14px;
+      border: 1px solid var(--gray-100);
+      transition: var(--transition);
+    }
+    .contact-info-card:hover {
+      border-color: rgba(62,131,188,0.2);
+      box-shadow: var(--shadow-sm);
+      transform: translateX(4px);
+    }
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, rgba(62,131,188,0.1), rgba(62,131,188,0.05));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--secondary);
+    }
+    .contact-icon i, .contact-icon svg { width: 20px; height: 20px; }
+    .contact-info-card h5 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 2px;
+    }
+    .contact-info-card p {
+      font-size: 0.9rem;
+      color: var(--gray-500);
+    }
+    .contact-highlights {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      margin-top: 20px;
+      border: 1px solid var(--gray-100);
+    }
+    .contact-highlights h4 {
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: var(--dark);
+      margin-bottom: 18px;
+    }
+    .contact-highlights ul li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 0;
+      font-size: 0.92rem;
+      color: var(--gray-700);
+    }
+    .contact-highlights ul li::before {
+      content: '\f00c';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      font-size: 0.7rem;
+      color: var(--secondary);
+      width: 22px;
+      height: 22px;
+      min-width: 22px;
+      background: rgba(62,131,188,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .contact-form-wrapper {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--gray-100);
+    }
+    .contact-form .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .form-group {
+      margin-bottom: 18px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px 16px;
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      font-family: 'Lato', sans-serif;
+      color: var(--dark);
+      background: var(--off-white);
+      transition: var(--transition);
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 4px rgba(62,131,188,0.1);
+      background: var(--white);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+    .footer {
+      background: var(--navy);
+      padding: 80px 0 0;
+      position: relative;
+    }
+    .footer-wave {
+      position: absolute;
+      top: -80px;
+      left: 0;
+      width: 100%;
+      line-height: 0;
+    }
+    .footer-wave svg { width: 100%; height: 80px; }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 50px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-brand p {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.92rem;
+      margin-top: 16px;
+      line-height: 1.7;
+    }
+    .footer-logo { height: 44px; width: auto; margin-bottom: 4px; }
+    .footer-socials {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .footer-socials a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+    .footer-socials a:hover {
+      background: var(--primary);
+      color: var(--dark);
+      transform: translateY(-3px);
+    }
+    .footer-links h4 {
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+    .footer-links a:hover {
+      color: var(--primary);
+      padding-left: 6px;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding: 24px 0;
+      color: rgba(255,255,255,0.35);
+      font-size: 0.85rem;
+    }
+
+    /* ========================================
+       BACK TO TOP
+    ======================================== */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--gradient-primary);
+      color: var(--dark);
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-primary);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: var(--transition);
+      z-index: 999;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .back-to-top:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 35px rgba(252,216,50,0.4);
+    }
+
+    /* ========================================
+       RESPONSIVE
+    ======================================== */
+    @media (max-width: 1024px) {
+      .overview-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggle { display: flex; }
+      .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: var(--dark);
+        flex-direction: column;
+        padding: 100px 30px 30px;
+        gap: 4px;
+        transition: right 0.4s ease;
+        box-shadow: -10px 0 40px rgba(0,0,0,0.4);
+        z-index: 999;
+      }
+      .nav-menu.active { right: 0; }
+      .nav-link {
+        width: 100%;
+        padding: 14px 18px;
+        font-size: 1rem;
+      }
+      .nav-link.cta-btn {
+        margin-left: 0;
+        margin-top: 10px;
+        text-align: center;
+      }
+      .hero { min-height: 60vh; padding: 120px 24px 60px; }
+      .overview-grid, .key-info-grid { grid-template-columns: 1fr; }
+      .requirements-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .timeline::before { left: 30px; }
+      .timeline-number {
+        width: 62px;
+        height: 62px;
+        min-width: 62px;
+        font-size: 0.95rem;
+      }
+      .timeline-item { gap: 20px; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .contact-form-wrapper { padding: 28px; }
+      .contact-form .form-row { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title { font-size: 1.9rem; }
+      .hero-badge { font-size: 0.75rem; padding: 8px 16px; }
+      .hero-breadcrumb { font-size: 0.8rem; }
+      .section-title { font-size: 1.6rem; }
+      .timeline-item { flex-direction: column; align-items: center; text-align: center; }
+      .timeline::before { display: none; }
+      .key-info-value { font-size: 1.6rem; }
+      .overview-card { padding: 30px 24px; }
+      .requirement-block { padding: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======= NAVBAR ======= -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../../index.html" class="nav-logo">
+        <img src="../../assets/logo.png" alt="De Guzman International Visa Consultancy" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../../index.html" class="nav-link">Home</a></li>
+        <li><a href="../../index.html#about" class="nav-link">About</a></li>
+        <li><a href="../../index.html#services" class="nav-link">Services</a></li>
+        <li><a href="../../index.html#contact" class="nav-link">Contact Us</a></li>
+        <li><a href="../../index.html#contact" class="nav-link cta-btn">Get Visa Assistance</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ======= HERO ======= -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-decoration">
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+      <div class="circle circle-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge fade-up">
+        <i class="fas fa-house"></i> Permanent Visas
+      </div>
+      <h1 class="hero-title fade-up delay-1">
+        Permanent <span class="highlight">Visas</span>
+      </h1>
+      <p class="hero-subtitle fade-up delay-2">
+        SRRV, 13(a) quota visas, and permanent residency applications for those looking to settle in the Philippines long-term.
+      </p>
+      <div class="hero-breadcrumb fade-up delay-3">
+        <a href="../../index.html">Home</a>
+        <span class="separator"><i class="fas fa-chevron-right"></i></span>
+        <a href="../../index.html#services">Services</a>
+        <span class="separator"><i class="fas fa-chevron-right"></i></span>
+        <span class="current">Permanent Visas</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= SERVICE OVERVIEW ======= -->
+  <section class="overview">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Our Services</span>
+        <h2 class="section-title">Permanent Visa <span class="highlight">Options</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Explore the pathways to permanent residency in the Philippines with our expert guidance.</p>
+      </div>
+      <div class="overview-grid">
+        <div class="overview-card fade-up delay-1">
+          <div class="overview-card-icon">
+            <i class="fas fa-umbrella-beach"></i>
+          </div>
+          <h3>SRRV (Special Resident Retiree's Visa)</h3>
+          <p>A special visa program managed by the Philippine Retirement Authority for foreign retirees and their dependents. Offers multiple tiers with varying deposit requirements.</p>
+        </div>
+        <div class="overview-card fade-up delay-2">
+          <div class="overview-card-icon">
+            <i class="fas fa-ring"></i>
+          </div>
+          <h3>13(a) Quota Immigrant Visa</h3>
+          <p>Available to foreign nationals married to Filipino citizens. Grants permanent resident status after a probationary period. The most common pathway to permanent residency.</p>
+        </div>
+        <div class="overview-card fade-up delay-3">
+          <div class="overview-card-icon">
+            <i class="fas fa-landmark"></i>
+          </div>
+          <h3>Permanent Resident Visa</h3>
+          <p>For foreign nationals who qualify under Philippine immigration law for permanent settlement. Includes investors, retirees, and those with family ties.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= REQUIREMENTS ======= -->
+  <section class="requirements">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Documentation</span>
+        <h2 class="section-title">What You'll <span class="highlight">Need</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Each visa type requires specific documentation. We help you prepare everything.</p>
+      </div>
+      <div class="requirements-grid">
+        <div class="requirement-block fade-left">
+          <h3><i class="fas fa-umbrella-beach"></i> For SRRV</h3>
+          <ul class="requirement-list">
+            <li>Valid passport (6+ months validity)</li>
+            <li>Medical clearance certificate</li>
+            <li>NBI / Police clearance</li>
+            <li>Required deposit (varies by age/tier)</li>
+          </ul>
+        </div>
+        <div class="requirement-block fade-right">
+          <h3><i class="fas fa-ring"></i> For 13(a) Visa</h3>
+          <ul class="requirement-list">
+            <li>Marriage certificate (PSA authenticated)</li>
+            <li>Spouse's Filipino birth certificate</li>
+            <li>Petition letter from Filipino spouse</li>
+            <li>Joint affidavit of financial support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= PROCESS TIMELINE ======= -->
+  <section class="process">
+    <div class="process-decoration">
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+    </div>
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">How It Works</span>
+        <h2 class="section-title">Our <span class="highlight">Process</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">A streamlined approach to securing your permanent residency in the Philippines.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item fade-up">
+          <div class="timeline-number">
+            <i class="fas fa-user-check"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-step">Step 1</div>
+            <h3>Eligibility Assessment</h3>
+            <p>We determine the best permanent visa option based on your situation.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-up delay-1">
+          <div class="timeline-number">
+            <i class="fas fa-folder-open"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-step">Step 2</div>
+            <h3>Document Collection</h3>
+            <p>We guide you in gathering and authenticating all required documents.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-up delay-2">
+          <div class="timeline-number">
+            <i class="fas fa-file-export"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-step">Step 3</div>
+            <h3>Application Filing</h3>
+            <p>We submit your application to PRA or Bureau of Immigration.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-up delay-3">
+          <div class="timeline-number">
+            <i class="fas fa-hourglass-half"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-step">Step 4</div>
+            <h3>Probationary Period</h3>
+            <p>For 13(a), a 1-year probationary period begins after initial approval.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-up delay-4">
+          <div class="timeline-number">
+            <i class="fas fa-circle-check"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-step">Step 5</div>
+            <h3>Final Approval</h3>
+            <p>Receive your permanent visa and enjoy long-term residency in the Philippines.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= KEY INFO CARDS ======= -->
+  <section class="key-info">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">At a Glance</span>
+        <h2 class="section-title">Key <span class="highlight">Information</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="key-info-grid">
+        <div class="key-info-card fade-up delay-1">
+          <div class="key-info-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div class="key-info-label">SRRV Processing</div>
+          <div class="key-info-value">30-60 Days</div>
+        </div>
+        <div class="key-info-card fade-up delay-2">
+          <div class="key-info-icon">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+          <div class="key-info-label">13(a) Probation</div>
+          <div class="key-info-value">1 Year</div>
+        </div>
+        <div class="key-info-card fade-up delay-3">
+          <div class="key-info-icon">
+            <i class="fas fa-hand-holding-dollar"></i>
+          </div>
+          <div class="key-info-label">Consultation</div>
+          <div class="key-info-value">Free</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FAQ ======= -->
+  <section class="faq">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Get quick answers to common questions about permanent visas in the Philippines.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item fade-up">
+          <button class="faq-question" aria-expanded="false">
+            <span>What is the difference between SRRV and 13(a)?</span>
+            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              SRRV is for retirees (age 35+) requiring a time deposit, while 13(a) is specifically for foreign spouses of Filipino citizens. SRRV offers more flexibility but requires a financial deposit.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item fade-up delay-1">
+          <button class="faq-question" aria-expanded="false">
+            <span>How much deposit is required for SRRV?</span>
+            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              The deposit varies: USD $20,000 for those 50+ with pension, USD $50,000 for those 35-49 without pension. Different tiers (Smile, Classic, Courtesy) have different requirements.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item fade-up delay-2">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can I work with a permanent visa?</span>
+            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              SRRV holders need a separate AEP to work. 13(a) permanent residents can work in the Philippines but may still need an AEP depending on the employer's requirements.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item fade-up delay-3">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can my family be included in my application?</span>
+            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes, both SRRV and 13(a) allow inclusion of dependents. SRRV allows spouse and children under 21. 13(a) covers the applicant with separate applications for children.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= CTA BANNER ======= -->
+  <section class="cta-banner">
+    <div class="cta-banner-decoration">
+      <div class="accent accent-1"></div>
+      <div class="accent accent-2"></div>
+    </div>
+    <div class="container">
+      <div class="cta-content fade-up">
+        <h2>Ready to Make the Philippines Your <span class="highlight">Home</span>?</h2>
+        <p>Start your permanent residency journey with expert guidance every step of the way.</p>
+        <div class="cta-buttons">
+          <a href="#contact-section" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i> Get Free Consultation
+          </a>
+          <a href="tel:+639085375177" class="btn btn-outline">
+            <i class="fas fa-phone"></i> Call Us Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= CONTACT SECTION ======= -->
+  <section class="contact" id="contact-section">
+    <div class="section-shape-top">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,40 C480,120 960,0 1440,80 L1440,0 L0,0 Z" fill="#0f1b2d"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact <span class="highlight">Us</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Ready to start your permanent residency application? Reach out for a free consultation.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info fade-left">
+          <div class="contact-info-card">
+            <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+            <div>
+              <h5>Location</h5>
+              <p>Philippines, serving nationwide</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon"><i data-lucide="phone"></i></div>
+            <div>
+              <h5>Phone</h5>
+              <p>+639 085 375 177</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon"><i data-lucide="mail"></i></div>
+            <div>
+              <h5>Email us</h5>
+              <p>shawiedginternational@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon"><i data-lucide="clock"></i></div>
+            <div>
+              <h5>Business hours</h5>
+              <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+            </div>
+          </div>
+          <div class="contact-highlights">
+            <h4>Why Choose Us?</h4>
+            <ul>
+              <li>8+ years of visa industry experience</li>
+              <li>Personalized service for each client</li>
+              <li>Quick response and processing</li>
+              <li>Competitive and transparent pricing</li>
+              <li>Support for all visa types and nationalities</li>
+              <li>Free Visa Consultation</li>
+            </ul>
+          </div>
+        </div>
+        <div class="contact-form-wrapper fade-right">
+          <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="1020194d-bb82-4e9c-987f-bd45b27df8db" />
+            <input type="hidden" name="subject" value="Permanent Visa Inquiry from DGI Website" />
+            <input type="hidden" name="from_name" value="De Guzman International Visa Consultancy Website" />
+            <input type="hidden" name="redirect" value="https://www.deguzmaninternational.com/pages/thank-you/" />
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="John" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Doe" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+63 917 123 4567" required />
+            </div>
+            <div class="form-group">
+              <label for="nationality">Nationality *</label>
+              <input type="text" id="nationality" name="nationality" placeholder="e.g. American" required />
+            </div>
+            <div class="form-group">
+              <label for="visaType">Visa Type</label>
+              <select id="visaType" name="visaType">
+                <option value="" disabled selected>Select visa type</option>
+                <option value="srrv">SRRV (Special Resident Retiree's Visa)</option>
+                <option value="13a">13(a) Quota Immigrant Visa</option>
+                <option value="permanent-resident">Permanent Resident Visa</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your permanent visa needs..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+        <path d="M0,64 C288,120 576,10 864,64 C1152,120 1296,40 1440,80 L1440,150 L0,150 Z" fill="#0a1628"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../../assets/logo.png" alt="DGIVC Logo" class="footer-logo" />
+          <p>Your trusted partner in navigating the world of international immigration and visa processing.</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/profile.php?id=61577828194156" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/shawie-de-guzman-29646615a/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#about">About Us</a></li>
+            <li><a href="../../index.html#services">Services</a></li>
+            <li><a href="../../index.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="../short-term-visas/">Short-Term Visas</a></li>
+            <li><a href="../visa-extensions/">Visa Extensions</a></li>
+            <li><a href="../work-visas/">Work Visas</a></li>
+            <li><a href="../permanent-visas/">Permanent Visas</a></li>
+            <li><a href="../inbound-visa-processing/">Inbound Visa Processing</a></li>
+            <li><a href="../balikbayan-dual-citizenship/">Balikbayan &amp; Dual Citizenship</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../privacy-policy/">Privacy Policy</a></li>
+            <li><a href="../terms-of-service/">Terms of Service</a></li>
+            <li><a href="../cookie-policy/">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 De Guzman International Visa Consultancy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======= BACK TO TOP ======= -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ======= SCRIPTS ======= -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    /* ====== Lucide Icons Init ====== */
+    lucide.createIcons();
+
+    /* ====== Navbar Toggle ====== */
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking a nav link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+
+    /* ====== Navbar Scroll ====== */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    /* ====== IntersectionObserver for Animations ====== */
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!prefersReducedMotion) {
+      const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.fade-up, .fade-left, .fade-right').forEach(el => {
+        observer.observe(el);
+      });
+    } else {
+      document.querySelectorAll('.fade-up, .fade-left, .fade-right').forEach(el => {
+        el.classList.add('visible');
+      });
+    }
+
+    /* ====== FAQ Accordion ====== */
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const isActive = item.classList.contains('active');
+
+        // Close all other items
+        document.querySelectorAll('.faq-item.active').forEach(openItem => {
+          if (openItem !== item) {
+            openItem.classList.remove('active');
+            openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            openItem.querySelector('.faq-answer').style.maxHeight = '0';
+          }
+        });
+
+        // Toggle current item
+        if (isActive) {
+          item.classList.remove('active');
+          button.setAttribute('aria-expanded', 'false');
+          answer.style.maxHeight = '0';
+        } else {
+          item.classList.add('active');
+          button.setAttribute('aria-expanded', 'true');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+
+    /* ====== Back to Top ====== */
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
